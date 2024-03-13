@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2AD6BE2BA25D440055DF65 /* RaceItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6BD2BA25D440055DF65 /* RaceItemViewModel.swift */; };
+		EF2AD6C02BA25E480055DF65 /* RaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6BF2BA25E480055DF65 /* RaceListView.swift */; };
+		EF2AD6C22BA25E660055DF65 /* RaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6C12BA25E660055DF65 /* RaceListViewModel.swift */; };
+		EF2AD6C42BA261E70055DF65 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6C32BA261E70055DF65 /* ViewState.swift */; };
+		EF2AD6C62BA262A70055DF65 /* RaceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6C52BA262A70055DF65 /* RaceScreen.swift */; };
+		EF2AD6C92BA262EA0055DF65 /* RacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6C82BA262EA0055DF65 /* RacePresenter.swift */; };
+		EF2AD6CB2BA266C60055DF65 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6CA2BA266C60055DF65 /* ActionView.swift */; };
+		EF2AD6CD2BA266E80055DF65 /* ActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6CC2BA266E80055DF65 /* ActionViewModel.swift */; };
 		EF6D98F12BA188C700C02262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */; };
 		EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */; };
 		EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD302BA1B048004A079C /* AppDependencies.swift */; };
@@ -20,6 +28,8 @@
 		EFAAAD472BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD462BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift */; };
 		EFAAAD492BA25670004A079C /* TestNavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD482BA25670004A079C /* TestNavigationControllerFactory.swift */; };
 		EFAAAD4B2BA25735004A079C /* NavigationControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD4A2BA25735004A079C /* NavigationControllerFactoryTests.swift */; };
+		EFAAAD4E2BA258AB004A079C /* RaceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD4D2BA258AB004A079C /* RaceItemView.swift */; };
+		EFAAAD502BA25949004A079C /* Font+System.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD4F2BA25949004A079C /* Font+System.swift */; };
 		EFABA6082BA179E800CA5C13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFABA6072BA179E800CA5C13 /* ContentView.swift */; };
 		EFABA60A2BA179E900CA5C13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFABA6092BA179E900CA5C13 /* Assets.xcassets */; };
 		EFABA60E2BA179E900CA5C13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFABA60D2BA179E900CA5C13 /* Preview Assets.xcassets */; };
@@ -37,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF2AD6BD2BA25D440055DF65 /* RaceItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemViewModel.swift; sourceTree = "<group>"; };
+		EF2AD6BF2BA25E480055DF65 /* RaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListView.swift; sourceTree = "<group>"; };
+		EF2AD6C12BA25E660055DF65 /* RaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewModel.swift; sourceTree = "<group>"; };
+		EF2AD6C32BA261E70055DF65 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		EF2AD6C52BA262A70055DF65 /* RaceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceScreen.swift; sourceTree = "<group>"; };
+		EF2AD6C82BA262EA0055DF65 /* RacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacePresenter.swift; sourceTree = "<group>"; };
+		EF2AD6CA2BA266C60055DF65 /* ActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionView.swift; sourceTree = "<group>"; };
+		EF2AD6CC2BA266E80055DF65 /* ActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewModel.swift; sourceTree = "<group>"; };
 		EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DefaultConfiguration.xcconfig; sourceTree = "<group>"; };
 		EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFactoryProtocol.swift; sourceTree = "<group>"; };
@@ -51,6 +69,8 @@
 		EFAAAD462BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppDependenciesFactoryTests.swift; sourceTree = "<group>"; };
 		EFAAAD482BA25670004A079C /* TestNavigationControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigationControllerFactory.swift; sourceTree = "<group>"; };
 		EFAAAD4A2BA25735004A079C /* NavigationControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerFactoryTests.swift; sourceTree = "<group>"; };
+		EFAAAD4D2BA258AB004A079C /* RaceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemView.swift; sourceTree = "<group>"; };
+		EFAAAD4F2BA25949004A079C /* Font+System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+System.swift"; sourceTree = "<group>"; };
 		EFABA6022BA179E800CA5C13 /* NextToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFABA6072BA179E800CA5C13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFABA6092BA179E900CA5C13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF2AD6C72BA262D40055DF65 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AD6C82BA262EA0055DF65 /* RacePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		EFAAAD2B2BA1AF45004A079C /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +138,10 @@
 			isa = PBXGroup;
 			children = (
 				EFAAAD382BA24F0B004A079C /* AppConfiguration.swift */,
+				EF2AD6C12BA25E660055DF65 /* RaceListViewModel.swift */,
+				EF2AD6BD2BA25D440055DF65 /* RaceItemViewModel.swift */,
+				EF2AD6CC2BA266E80055DF65 /* ActionViewModel.swift */,
+				EF2AD6C32BA261E70055DF65 /* ViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +179,18 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		EFAAAD4C2BA2584A004A079C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AD6C52BA262A70055DF65 /* RaceScreen.swift */,
+				EF2AD6BF2BA25E480055DF65 /* RaceListView.swift */,
+				EFAAAD4D2BA258AB004A079C /* RaceItemView.swift */,
+				EF2AD6CA2BA266C60055DF65 /* ActionView.swift */,
+				EFAAAD4F2BA25949004A079C /* Font+System.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EFABA5F92BA179E800CA5C13 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +215,8 @@
 				EFABA6312BA17CB400CA5C13 /* AppDelegate.swift */,
 				EFABA6072BA179E800CA5C13 /* ContentView.swift */,
 				EFAAAD2D2BA1AFE2004A079C /* AppDependencies */,
+				EFAAAD4C2BA2584A004A079C /* Views */,
+				EF2AD6C72BA262D40055DF65 /* Presenter */,
 				EFAAAD372BA24EF2004A079C /* Models */,
 				EFAAAD322BA1BC40004A079C /* Navigation */,
 				EFAAAD2B2BA1AF45004A079C /* Configurations */,
@@ -313,13 +359,23 @@
 			files = (
 				EFAAAD362BA1BD39004A079C /* NavigationControllerFactory.swift in Sources */,
 				EFAAAD3D2BA25030004A079C /* DefaultAppDependenciesFactory.swift in Sources */,
+				EF2AD6C42BA261E70055DF65 /* ViewState.swift in Sources */,
 				EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */,
 				EFAAAD3B2BA24F42004A079C /* AppDependenciesProtocol.swift in Sources */,
+				EFAAAD502BA25949004A079C /* Font+System.swift in Sources */,
+				EF2AD6C62BA262A70055DF65 /* RaceScreen.swift in Sources */,
 				EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */,
+				EF2AD6C02BA25E480055DF65 /* RaceListView.swift in Sources */,
 				EFABA6322BA17CB400CA5C13 /* AppDelegate.swift in Sources */,
 				EFABA6082BA179E800CA5C13 /* ContentView.swift in Sources */,
+				EF2AD6C22BA25E660055DF65 /* RaceListViewModel.swift in Sources */,
+				EF2AD6CB2BA266C60055DF65 /* ActionView.swift in Sources */,
+				EF2AD6C92BA262EA0055DF65 /* RacePresenter.swift in Sources */,
+				EF2AD6BE2BA25D440055DF65 /* RaceItemViewModel.swift in Sources */,
 				EFAAAD392BA24F0B004A079C /* AppConfiguration.swift in Sources */,
+				EFAAAD4E2BA258AB004A079C /* RaceItemView.swift in Sources */,
 				EFAAAD342BA1BCA5004A079C /* NavigationControllerProtocol.swift in Sources */,
+				EF2AD6CD2BA266E80055DF65 /* ActionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
