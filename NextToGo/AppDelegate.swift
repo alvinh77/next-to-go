@@ -23,25 +23,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Helper
 
 extension AppDelegate {
-    private func makeWindow() -> UIWindow {
+    private func makeWindow() -> UIWindow? {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = makeNavigationController()
+        window.rootViewController = getAppDependencies()?.rootViewController
         window.makeKeyAndVisible()
         return window
     }
 
-    private func makeNavigationController() -> UINavigationController {
-        let navController = UINavigationController(rootViewController: makeRootViewController())
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        navController.navigationBar.standardAppearance = appearance
-        navController.navigationBar.scrollEdgeAppearance = appearance
-        return navController
-    }
-
-    private func makeRootViewController() -> UIViewController {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .orange
-        return viewController
+    /*
+     Here we read the `AppDepdencies` name from configuration file `DefaultConfiguration`.
+     If we would like introduce more schemes eg. staging, we could make different app
+     dependencies class (conforms to AppDependenciesProtocol) to be configurated into
+     corresponding schemes. eg. Passing staging API url domain to scheme `staging` and
+     production API url domain to scheme `release`
+     */
+    private func getAppDependencies() -> AppDependenciesProtocol? {
+        guard let namespace = Bundle.main.infoDictionary?["CFBundleExecutable"] as? String
+        else {
+            assertionFailure("`namespace` is expected to exist")
+            return nil
+        }
+        guard let appDependenciesFactoryClassName = Bundle.main
+            .infoDictionary?["APP_DEPENDENCIES_FACTORY_CLASS_NAME"] as? String
+        else {
+            assertionFailure("`APP_DEPENDENCIES_FACTORY_CLASS_NAME` is expected to exist")
+            return nil
+        }
+        guard let appDependenciesFactory = Bundle.main.classNamed(
+            "\(namespace).\(appDependenciesFactoryClassName)"
+        ) as? AppDependenciesFactoryProtocol.Type
+        else {
+            assertionFailure("`AppDependenciesFactory` is expected to exist")
+            return nil
+        }
+        return appDependenciesFactory.init().appDependencies
     }
 }

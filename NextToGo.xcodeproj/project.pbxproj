@@ -8,10 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		EF6D98F12BA188C700C02262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */; };
+		EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */; };
+		EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD302BA1B048004A079C /* AppDependencies.swift */; };
+		EFAAAD342BA1BCA5004A079C /* NavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD332BA1BCA5004A079C /* NavigationControllerProtocol.swift */; };
+		EFAAAD362BA1BD39004A079C /* NavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD352BA1BD39004A079C /* NavigationControllerFactory.swift */; };
+		EFAAAD392BA24F0B004A079C /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD382BA24F0B004A079C /* AppConfiguration.swift */; };
+		EFAAAD3B2BA24F42004A079C /* AppDependenciesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD3A2BA24F42004A079C /* AppDependenciesProtocol.swift */; };
+		EFAAAD3D2BA25030004A079C /* DefaultAppDependenciesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD3C2BA25030004A079C /* DefaultAppDependenciesFactory.swift */; };
+		EFAAAD422BA252B8004A079C /* AppDependenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD412BA252B8004A079C /* AppDependenciesTests.swift */; };
+		EFAAAD452BA25353004A079C /* TestNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD442BA25353004A079C /* TestNavigationController.swift */; };
+		EFAAAD472BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD462BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift */; };
+		EFAAAD492BA25670004A079C /* TestNavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD482BA25670004A079C /* TestNavigationControllerFactory.swift */; };
+		EFAAAD4B2BA25735004A079C /* NavigationControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD4A2BA25735004A079C /* NavigationControllerFactoryTests.swift */; };
 		EFABA6082BA179E800CA5C13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFABA6072BA179E800CA5C13 /* ContentView.swift */; };
 		EFABA60A2BA179E900CA5C13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFABA6092BA179E900CA5C13 /* Assets.xcassets */; };
 		EFABA60E2BA179E900CA5C13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFABA60D2BA179E900CA5C13 /* Preview Assets.xcassets */; };
-		EFABA6182BA179E900CA5C13 /* NextToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFABA6172BA179E900CA5C13 /* NextToGoTests.swift */; };
 		EFABA6322BA17CB400CA5C13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFABA6312BA17CB400CA5C13 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,13 +38,25 @@
 
 /* Begin PBXFileReference section */
 		EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DefaultConfiguration.xcconfig; sourceTree = "<group>"; };
+		EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFactoryProtocol.swift; sourceTree = "<group>"; };
+		EFAAAD302BA1B048004A079C /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		EFAAAD332BA1BCA5004A079C /* NavigationControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerProtocol.swift; sourceTree = "<group>"; };
+		EFAAAD352BA1BD39004A079C /* NavigationControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerFactory.swift; sourceTree = "<group>"; };
+		EFAAAD382BA24F0B004A079C /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		EFAAAD3A2BA24F42004A079C /* AppDependenciesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesProtocol.swift; sourceTree = "<group>"; };
+		EFAAAD3C2BA25030004A079C /* DefaultAppDependenciesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppDependenciesFactory.swift; sourceTree = "<group>"; };
+		EFAAAD412BA252B8004A079C /* AppDependenciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesTests.swift; sourceTree = "<group>"; };
+		EFAAAD442BA25353004A079C /* TestNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigationController.swift; sourceTree = "<group>"; };
+		EFAAAD462BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppDependenciesFactoryTests.swift; sourceTree = "<group>"; };
+		EFAAAD482BA25670004A079C /* TestNavigationControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigationControllerFactory.swift; sourceTree = "<group>"; };
+		EFAAAD4A2BA25735004A079C /* NavigationControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerFactoryTests.swift; sourceTree = "<group>"; };
 		EFABA6022BA179E800CA5C13 /* NextToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFABA6072BA179E800CA5C13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EFABA6092BA179E900CA5C13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFABA60B2BA179E900CA5C13 /* NextToGo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NextToGo.entitlements; sourceTree = "<group>"; };
 		EFABA60D2BA179E900CA5C13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFABA6132BA179E900CA5C13 /* NextToGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextToGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFABA6172BA179E900CA5C13 /* NextToGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextToGoTests.swift; sourceTree = "<group>"; };
 		EFABA6312BA17CB400CA5C13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +78,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EFAAAD2B2BA1AF45004A079C /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		EFAAAD2D2BA1AFE2004A079C /* AppDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */,
+				EFAAAD302BA1B048004A079C /* AppDependencies.swift */,
+				EFAAAD3A2BA24F42004A079C /* AppDependenciesProtocol.swift */,
+				EFAAAD3C2BA25030004A079C /* DefaultAppDependenciesFactory.swift */,
+			);
+			path = AppDependencies;
+			sourceTree = "<group>";
+		};
+		EFAAAD322BA1BC40004A079C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EFAAAD332BA1BCA5004A079C /* NavigationControllerProtocol.swift */,
+				EFAAAD352BA1BD39004A079C /* NavigationControllerFactory.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EFAAAD372BA24EF2004A079C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFAAAD382BA24F0B004A079C /* AppConfiguration.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFAAAD3E2BA251E7004A079C /* AppDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				EFAAAD412BA252B8004A079C /* AppDependenciesTests.swift */,
+				EFAAAD462BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift */,
+			);
+			path = AppDependencies;
+			sourceTree = "<group>";
+		};
+		EFAAAD3F2BA251F8004A079C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFAAAD402BA251FF004A079C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EFAAAD4A2BA25735004A079C /* NavigationControllerFactoryTests.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EFAAAD432BA2532F004A079C /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EFAAAD442BA25353004A079C /* TestNavigationController.swift */,
+				EFAAAD482BA25670004A079C /* TestNavigationControllerFactory.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		EFABA5F92BA179E800CA5C13 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +170,10 @@
 			children = (
 				EFABA6312BA17CB400CA5C13 /* AppDelegate.swift */,
 				EFABA6072BA179E800CA5C13 /* ContentView.swift */,
+				EFAAAD2D2BA1AFE2004A079C /* AppDependencies */,
+				EFAAAD372BA24EF2004A079C /* Models */,
+				EFAAAD322BA1BC40004A079C /* Navigation */,
+				EFAAAD2B2BA1AF45004A079C /* Configurations */,
 				EFABA6302BA17C4100CA5C13 /* SupportFiles */,
 				EFABA60C2BA179E900CA5C13 /* Preview Content */,
 			);
@@ -95,7 +191,10 @@
 		EFABA6162BA179E900CA5C13 /* NextToGoTests */ = {
 			isa = PBXGroup;
 			children = (
-				EFABA6172BA179E900CA5C13 /* NextToGoTests.swift */,
+				EFAAAD432BA2532F004A079C /* Mocks */,
+				EFAAAD3E2BA251E7004A079C /* AppDependencies */,
+				EFAAAD3F2BA251F8004A079C /* Models */,
+				EFAAAD402BA251FF004A079C /* Navigation */,
 			);
 			path = NextToGoTests;
 			sourceTree = "<group>";
@@ -163,6 +262,7 @@
 					};
 					EFABA6122BA179E900CA5C13 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 						TestTargetID = EFABA6012BA179E800CA5C13;
 					};
 				};
@@ -211,8 +311,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAAAD362BA1BD39004A079C /* NavigationControllerFactory.swift in Sources */,
+				EFAAAD3D2BA25030004A079C /* DefaultAppDependenciesFactory.swift in Sources */,
+				EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */,
+				EFAAAD3B2BA24F42004A079C /* AppDependenciesProtocol.swift in Sources */,
+				EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */,
 				EFABA6322BA17CB400CA5C13 /* AppDelegate.swift in Sources */,
 				EFABA6082BA179E800CA5C13 /* ContentView.swift in Sources */,
+				EFAAAD392BA24F0B004A079C /* AppConfiguration.swift in Sources */,
+				EFAAAD342BA1BCA5004A079C /* NavigationControllerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +327,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFABA6182BA179E900CA5C13 /* NextToGoTests.swift in Sources */,
+				EFAAAD492BA25670004A079C /* TestNavigationControllerFactory.swift in Sources */,
+				EFAAAD472BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift in Sources */,
+				EFAAAD422BA252B8004A079C /* AppDependenciesTests.swift in Sources */,
+				EFAAAD4B2BA25735004A079C /* NavigationControllerFactoryTests.swift in Sources */,
+				EFAAAD452BA25353004A079C /* TestNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +348,7 @@
 /* Begin XCBuildConfiguration section */
 		EFABA6252BA179E900CA5C13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -301,6 +413,7 @@
 		};
 		EFABA6262BA179E900CA5C13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -357,6 +470,7 @@
 		};
 		EFABA6282BA179E900CA5C13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,6 +511,7 @@
 		};
 		EFABA6292BA179E900CA5C13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -437,9 +552,11 @@
 		};
 		EFABA62B2BA179E900CA5C13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -454,6 +571,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -463,9 +581,11 @@
 		};
 		EFABA62C2BA179E900CA5C13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -1,0 +1,11 @@
+//
+//  DefaultConfiguration.xcconfig
+//  NextToGo
+//
+//  Created by Alvin He on 13/3/2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_DEPENDENCIES_FACTORY_CLASS_NAME = DefaultAppDependenciesFactory
