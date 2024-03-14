@@ -9,7 +9,7 @@ public protocol RaceMapping {
     func map(_ response: RaceResponse, filter: RaceFilter) -> RaceListViewModel
 }
 
-public struct RaceMapper: RaceMapping {
+public struct RaceMapper: RaceMapping, Sendable {
     public init() {}
 
     public func map(_ response: RaceResponse, filter: RaceFilter) -> RaceListViewModel {

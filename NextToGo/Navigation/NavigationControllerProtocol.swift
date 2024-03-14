@@ -7,8 +7,8 @@
 
 import UIKit
 
-public protocol NavigationControllerProtocol: UIViewController {
-
+@MainActor public protocol NavigationControllerProtocol: UIViewController {
+    func pushViewController(_ viewController: UIViewController, animated: Bool)
 }
 
 extension UINavigationController: NavigationControllerProtocol {}

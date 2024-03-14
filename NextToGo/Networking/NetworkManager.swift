@@ -19,16 +19,9 @@ public struct NetworkManager: NetworkManaging {
     }
 
     public func data<Response: Decodable>(from request: APIRequest) async throws -> Response {
-        let urlRequest = try map(request)
+        let urlRequest = try URLRequest(request: request)
         let data = try await getResponse(from: urlRequest)
         return try decode(data)
-    }
-
-    private func map(_ request: APIRequest) throws -> URLRequest {
-        guard let url = URL(string: "\(request.baseURL)\(request.path)") else { throw APIError.invalidURL }
-        let urlRequest = NSMutableURLRequest(url: url)
-        urlRequest.httpMethod = request.method.rawValue
-        return urlRequest as URLRequest
     }
 
     private func getResponse(from request: URLRequest) async throws -> Data {

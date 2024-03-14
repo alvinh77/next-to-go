@@ -41,13 +41,14 @@ struct RaceScreen_Previews: PreviewProvider {
         RaceScreen(presenter: TestPresenter(viewState: .action(actionModel)))
     }
 
-    private class TestPresenter: RacePresenterProtocol {
+    private class TestPresenter: RacePresenterProtocol, @unchecked Sendable {
         var viewState: State
         init(
             viewState: State = .notStarted
         ) {
             self.viewState = viewState
         }
+        func loadData() {}
     }
 
     static var successModel: RaceListViewModel {

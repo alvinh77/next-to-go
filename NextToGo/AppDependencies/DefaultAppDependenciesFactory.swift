@@ -11,9 +11,14 @@ public final class DefaultAppDependenciesFactory: AppDependenciesFactoryProtocol
     public init() {}
 
     public var appDependencies: any AppDependenciesProtocol {
-        AppDependencies(
-            appConfiguration: AppConfiguration(baseURL: "https://api.neds.com.au/"),
-            navigationControllerFactory: NavigationControllerFactory()
+        let configuration = AppConfiguration(baseURL: "https://api.neds.com.au")
+        return AppDependencies(
+            appConfiguration: configuration,
+            navigationControllerFactory: NavigationControllerFactory(),
+            raceViewControllerFactory: RaceViewControllerFactory(
+                baseURL: configuration.baseURL,
+                serverSession: URLSession.shared
+            )
         )
     }
 }

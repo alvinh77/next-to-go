@@ -5,7 +5,7 @@
 //  Created by Alvin He on 14/3/2024.
 //
 
-public protocol RaceRespositoryProcotol {
+public protocol RaceRespositoryProcotol: Sendable {
     func fetchRaces(
         filter: RaceFilter,
         forceUpdate: Bool
@@ -36,8 +36,9 @@ public actor RaceRespository: RaceRespositoryProcotol {
             response = try await networkManager.data(
                 from: APIRequest(
                     baseURL: baseURL,
-                    path: "/rest/v1/racing/?method=nextraces&count=10",
-                    method: .get
+                    path: "/rest/v1/racing/",
+                    method: .get,
+                    parameters: ["method": "nextraces", "count": "10"]
                 )
             )
             self.cachedResponse = response

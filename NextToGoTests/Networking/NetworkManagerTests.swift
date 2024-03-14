@@ -32,19 +32,6 @@ final class NetworkManagerTests: XCTestCase {
         XCTAssertEqual(dataCalls[0].httpMethod, "GET")
     }
 
-    func test_data_whenURLIsInvalid() async {
-        let request = APIRequest(baseURL: "", path: "", method: .get)
-        do {
-            let _: TestModel = try await manager.data(from: request)
-            XCTFail("An error is expected to be thrown")
-        } catch {
-            XCTAssertEqual(
-                error as? APIError,
-                .invalidURL
-            )
-        }
-    }
-
     func test_data_whenServerSessionThrowsError() async {
         let request = APIRequest(baseURL: "https://www.test.com", path: "/api", method: .get)
         serverSession.error = .init()

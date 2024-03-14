@@ -11,15 +11,20 @@ public struct RaceResponse: Decodable, Sendable {
     public let identifiers: [String]
     public let summariesDictionary: [String: Summary]
 
+    public enum DataKeys: String, CodingKey {
+        case data
+    }
+
     public enum CodingKeys: String, CodingKey {
         case identifiers = "next_to_go_ids"
         case summariesDictionary = "race_summaries"
     }
 
     public init(from decoder: any Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.identifiers = try container.decode([String].self, forKey: .identifiers)
-        self.summariesDictionary = try container.decode([String: Summary].self, forKey: .summariesDictionary)
+        let container = try decoder.container(keyedBy: DataKeys.self)
+        let dataContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .data)
+        self.identifiers = try dataContainer.decode([String].self, forKey: .identifiers)
+        self.summariesDictionary = try dataContainer.decode([String: Summary].self, forKey: .summariesDictionary)
     }
 
     public init(

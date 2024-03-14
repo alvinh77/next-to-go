@@ -9,10 +9,10 @@ import SwiftUI
 
 extension Font {
     static var systemTitle: Font {
-        .system(size: 17)
+        Font.title3
     }
 
     static var systemBody: Font {
-        .system(size: 15)
+        Font.body
     }
 }

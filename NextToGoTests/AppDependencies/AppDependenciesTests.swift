@@ -13,7 +13,8 @@ final class AppDependenciesTests: XCTestCase {
     @MainActor func test_rootViewController() {
         let appDependencies = AppDependencies(
             appConfiguration: AppConfiguration(baseURL: "https://www.test.com"),
-            navigationControllerFactory: TestNavigationControllerFactory()
+            navigationControllerFactory: TestNavigationControllerFactory(),
+            raceViewControllerFactory: TestRaceViewControllerFactory()
         )
         XCTAssertEqual(
             appDependencies.appConfiguration.baseURL,

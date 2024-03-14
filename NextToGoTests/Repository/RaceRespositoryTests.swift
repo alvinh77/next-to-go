@@ -41,7 +41,8 @@ final class RaceRespositoryTests: XCTestCase {
         let dataCall = networkManager.dataCalls[0]
         XCTAssertEqual(dataCall.baseURL, "https://www.test.com")
         XCTAssertEqual(dataCall.method, .get)
-        XCTAssertEqual(dataCall.path, "/rest/v1/racing/?method=nextraces&count=10")
+        XCTAssertEqual(dataCall.path, "/rest/v1/racing/")
+        XCTAssertEqual(dataCall.parameters, ["method": "nextraces", "count": "10"])
         XCTAssertEqual(model.items.count, 1)
         XCTAssertEqual(mapper.mapCalls.count, 1)
         let mapCall = mapper.mapCalls[0]
