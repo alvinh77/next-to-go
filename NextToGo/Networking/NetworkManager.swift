@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol NetworkManaging {
+public protocol NetworkManaging: Sendable {
     func data<Response: Decodable>(from request: APIRequest) async throws -> Response
 }
 

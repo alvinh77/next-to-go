@@ -23,6 +23,13 @@
 		EF2AD6DB2BA275750055DF65 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6DA2BA275750055DF65 /* NetworkManagerTests.swift */; };
 		EF2AD6DD2BA28A1F0055DF65 /* RaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6DC2BA28A1F0055DF65 /* RaceResponse.swift */; };
 		EF2AD6DF2BA28F520055DF65 /* RaceResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6DE2BA28F520055DF65 /* RaceResponseTests.swift */; };
+		EF2AD6E22BA296C10055DF65 /* RaceRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6E12BA296C10055DF65 /* RaceRespository.swift */; };
+		EF2AD6E42BA2972D0055DF65 /* RaceFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6E32BA2972D0055DF65 /* RaceFilter.swift */; };
+		EF2AD6E62BA29ABE0055DF65 /* RaceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6E52BA29ABE0055DF65 /* RaceMapper.swift */; };
+		EF2AD6E92BA2A0EB0055DF65 /* RaceMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6E82BA2A0EB0055DF65 /* RaceMapperTests.swift */; };
+		EF2AD6EB2BA2A8AE0055DF65 /* TestRaceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6EA2BA2A8AE0055DF65 /* TestRaceMapper.swift */; };
+		EF2AD6ED2BA2AD680055DF65 /* RaceRespositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6EC2BA2AD680055DF65 /* RaceRespositoryTests.swift */; };
+		EF2AD6EF2BA2AD930055DF65 /* TestNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6EE2BA2AD930055DF65 /* TestNetworkManager.swift */; };
 		EF6D98F12BA188C700C02262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */; };
 		EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */; };
 		EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD302BA1B048004A079C /* AppDependencies.swift */; };
@@ -71,6 +78,13 @@
 		EF2AD6DA2BA275750055DF65 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		EF2AD6DC2BA28A1F0055DF65 /* RaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResponse.swift; sourceTree = "<group>"; };
 		EF2AD6DE2BA28F520055DF65 /* RaceResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResponseTests.swift; sourceTree = "<group>"; };
+		EF2AD6E12BA296C10055DF65 /* RaceRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceRespository.swift; sourceTree = "<group>"; };
+		EF2AD6E32BA2972D0055DF65 /* RaceFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceFilter.swift; sourceTree = "<group>"; };
+		EF2AD6E52BA29ABE0055DF65 /* RaceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceMapper.swift; sourceTree = "<group>"; };
+		EF2AD6E82BA2A0EB0055DF65 /* RaceMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceMapperTests.swift; sourceTree = "<group>"; };
+		EF2AD6EA2BA2A8AE0055DF65 /* TestRaceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRaceMapper.swift; sourceTree = "<group>"; };
+		EF2AD6EC2BA2AD680055DF65 /* RaceRespositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceRespositoryTests.swift; sourceTree = "<group>"; };
+		EF2AD6EE2BA2AD930055DF65 /* TestNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkManager.swift; sourceTree = "<group>"; };
 		EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DefaultConfiguration.xcconfig; sourceTree = "<group>"; };
 		EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFactoryProtocol.swift; sourceTree = "<group>"; };
@@ -141,6 +155,24 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		EF2AD6E02BA296890055DF65 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AD6E12BA296C10055DF65 /* RaceRespository.swift */,
+				EF2AD6E52BA29ABE0055DF65 /* RaceMapper.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EF2AD6E72BA2A0D10055DF65 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AD6E82BA2A0EB0055DF65 /* RaceMapperTests.swift */,
+				EF2AD6EC2BA2AD680055DF65 /* RaceRespositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		EFAAAD2B2BA1AF45004A079C /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +210,7 @@
 				EF2AD6CC2BA266E80055DF65 /* ActionViewModel.swift */,
 				EF2AD6C32BA261E70055DF65 /* ViewState.swift */,
 				EF2AD6DC2BA28A1F0055DF65 /* RaceResponse.swift */,
+				EF2AD6E32BA2972D0055DF65 /* RaceFilter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +246,8 @@
 				EFAAAD442BA25353004A079C /* TestNavigationController.swift */,
 				EFAAAD482BA25670004A079C /* TestNavigationControllerFactory.swift */,
 				EF2AD6D82BA2746E0055DF65 /* TestServerSession.swift */,
+				EF2AD6EA2BA2A8AE0055DF65 /* TestRaceMapper.swift */,
+				EF2AD6EE2BA2AD930055DF65 /* TestNetworkManager.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -255,6 +290,7 @@
 				EFAAAD2D2BA1AFE2004A079C /* AppDependencies */,
 				EFAAAD4C2BA2584A004A079C /* Views */,
 				EF2AD6C72BA262D40055DF65 /* Presenter */,
+				EF2AD6E02BA296890055DF65 /* Repository */,
 				EFAAAD372BA24EF2004A079C /* Models */,
 				EFAAAD322BA1BC40004A079C /* Navigation */,
 				EF2AD6CE2BA26BE60055DF65 /* Networking */,
@@ -278,6 +314,7 @@
 			children = (
 				EFAAAD432BA2532F004A079C /* Mocks */,
 				EFAAAD3E2BA251E7004A079C /* AppDependencies */,
+				EF2AD6E72BA2A0D10055DF65 /* Repository */,
 				EFAAAD3F2BA251F8004A079C /* Models */,
 				EFAAAD402BA251FF004A079C /* Navigation */,
 				EF2AD6D72BA273EB0055DF65 /* Networking */,
@@ -398,6 +435,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAAAD362BA1BD39004A079C /* NavigationControllerFactory.swift in Sources */,
+				EF2AD6E62BA29ABE0055DF65 /* RaceMapper.swift in Sources */,
+				EF2AD6E22BA296C10055DF65 /* RaceRespository.swift in Sources */,
 				EF2AD6D22BA26D2C0055DF65 /* APIRequest.swift in Sources */,
 				EFAAAD3D2BA25030004A079C /* DefaultAppDependenciesFactory.swift in Sources */,
 				EF2AD6C42BA261E70055DF65 /* ViewState.swift in Sources */,
@@ -419,6 +458,7 @@
 				EFAAAD392BA24F0B004A079C /* AppConfiguration.swift in Sources */,
 				EFAAAD4E2BA258AB004A079C /* RaceItemView.swift in Sources */,
 				EF2AD6D42BA26E110055DF65 /* ServerSession.swift in Sources */,
+				EF2AD6E42BA2972D0055DF65 /* RaceFilter.swift in Sources */,
 				EFAAAD342BA1BCA5004A079C /* NavigationControllerProtocol.swift in Sources */,
 				EF2AD6CD2BA266E80055DF65 /* ActionViewModel.swift in Sources */,
 			);
@@ -430,12 +470,16 @@
 			files = (
 				EFAAAD492BA25670004A079C /* TestNavigationControllerFactory.swift in Sources */,
 				EF2AD6D92BA2746E0055DF65 /* TestServerSession.swift in Sources */,
+				EF2AD6E92BA2A0EB0055DF65 /* RaceMapperTests.swift in Sources */,
 				EFAAAD472BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift in Sources */,
+				EF2AD6EF2BA2AD930055DF65 /* TestNetworkManager.swift in Sources */,
+				EF2AD6ED2BA2AD680055DF65 /* RaceRespositoryTests.swift in Sources */,
 				EFAAAD422BA252B8004A079C /* AppDependenciesTests.swift in Sources */,
 				EF2AD6DB2BA275750055DF65 /* NetworkManagerTests.swift in Sources */,
 				EFAAAD4B2BA25735004A079C /* NavigationControllerFactoryTests.swift in Sources */,
 				EFAAAD452BA25353004A079C /* TestNavigationController.swift in Sources */,
 				EF2AD6DF2BA28F520055DF65 /* RaceResponseTests.swift in Sources */,
+				EF2AD6EB2BA2A8AE0055DF65 /* TestRaceMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

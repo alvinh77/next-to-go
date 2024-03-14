@@ -5,7 +5,7 @@
 //  Created by Alvin He on 14/3/2024.
 //
 
-public struct RaceItemViewModel: Identifiable {
+public struct RaceItemViewModel: Identifiable, Sendable {
     public let id: String
     public let title: String
     public let detail: String

@@ -7,34 +7,41 @@
 
 import Foundation
 
-public struct RaceResponse: Decodable {
-    public let statusCode: Int
+public struct RaceResponse: Decodable, Sendable {
     public let identifiers: [String]
-    public let summaries: [Summary]
+    public let summariesDictionary: [String: Summary]
 
     public enum CodingKeys: String, CodingKey {
-        case statusCode = "status"
         case identifiers = "next_to_go_ids"
-        case summaries = "race_summaries"
+        case summariesDictionary = "race_summaries"
     }
 
     public init(from decoder: any Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.statusCode = try container.decode(Int.self, forKey: .statusCode)
         self.identifiers = try container.decode([String].self, forKey: .identifiers)
-        self.summaries = try container.decode([Summary].self, forKey: .summaries)
+        self.summariesDictionary = try container.decode([String: Summary].self, forKey: .summariesDictionary)
+    }
+
+    public init(
+        identifiers: [String],
+        summariesDictionary: [String: Summary]
+    ) {
+        self.identifiers = identifiers
+        self.summariesDictionary = summariesDictionary
     }
 }
 
 extension RaceResponse {
-    public struct Summary: Decodable {
+    public struct Summary: Decodable, Sendable {
         let identifier: String
+        let categoryId: String
         let meetingName: String
         let number: Int
         let advisedStart: Int
 
         public enum CodingKeys: String, CodingKey {
             case identifier = "race_id"
+            case categoryId = "category_id"
             case meetingName = "meeting_name"
             case number = "race_number"
             case advisedStart = "advertised_start"
@@ -43,6 +50,7 @@ extension RaceResponse {
         public init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             self.identifier = try container.decode(String.self, forKey: .identifier)
+            self.categoryId = try container.decode(String.self, forKey: .categoryId)
             self.meetingName = try container.decode(String.self, forKey: .meetingName)
             self.number = try container.decode(Int.self, forKey: .number)
             let advisedStartDictionary = try container.decode([String: Int].self, forKey: .advisedStart)
@@ -55,6 +63,20 @@ extension RaceResponse {
                     )
                 )
             }
+            self.advisedStart = advisedStart
+        }
+
+        public init(
+            identifier: String,
+            categoryId: String,
+            meetingName: String,
+            number: Int,
+            advisedStart: Int
+        ) {
+            self.identifier = identifier
+            self.categoryId = categoryId
+            self.meetingName = meetingName
+            self.number = number
             self.advisedStart = advisedStart
         }
     }
