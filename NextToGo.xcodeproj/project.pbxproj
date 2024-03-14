@@ -21,6 +21,8 @@
 		EF2AD6D62BA26EB40055DF65 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6D52BA26EB40055DF65 /* APIError.swift */; };
 		EF2AD6D92BA2746E0055DF65 /* TestServerSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6D82BA2746E0055DF65 /* TestServerSession.swift */; };
 		EF2AD6DB2BA275750055DF65 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6DA2BA275750055DF65 /* NetworkManagerTests.swift */; };
+		EF2AD6DD2BA28A1F0055DF65 /* RaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6DC2BA28A1F0055DF65 /* RaceResponse.swift */; };
+		EF2AD6DF2BA28F520055DF65 /* RaceResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6DE2BA28F520055DF65 /* RaceResponseTests.swift */; };
 		EF6D98F12BA188C700C02262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */; };
 		EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */; };
 		EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD302BA1B048004A079C /* AppDependencies.swift */; };
@@ -67,6 +69,8 @@
 		EF2AD6D52BA26EB40055DF65 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		EF2AD6D82BA2746E0055DF65 /* TestServerSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestServerSession.swift; sourceTree = "<group>"; };
 		EF2AD6DA2BA275750055DF65 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		EF2AD6DC2BA28A1F0055DF65 /* RaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResponse.swift; sourceTree = "<group>"; };
+		EF2AD6DE2BA28F520055DF65 /* RaceResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResponseTests.swift; sourceTree = "<group>"; };
 		EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DefaultConfiguration.xcconfig; sourceTree = "<group>"; };
 		EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFactoryProtocol.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				EF2AD6BD2BA25D440055DF65 /* RaceItemViewModel.swift */,
 				EF2AD6CC2BA266E80055DF65 /* ActionViewModel.swift */,
 				EF2AD6C32BA261E70055DF65 /* ViewState.swift */,
+				EF2AD6DC2BA28A1F0055DF65 /* RaceResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 		EFAAAD3F2BA251F8004A079C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF2AD6DE2BA28F520055DF65 /* RaceResponseTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */,
 				EFAAAD3B2BA24F42004A079C /* AppDependenciesProtocol.swift in Sources */,
 				EFAAAD502BA25949004A079C /* Font+System.swift in Sources */,
+				EF2AD6DD2BA28A1F0055DF65 /* RaceResponse.swift in Sources */,
 				EF2AD6C62BA262A70055DF65 /* RaceScreen.swift in Sources */,
 				EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */,
 				EF2AD6C02BA25E480055DF65 /* RaceListView.swift in Sources */,
@@ -428,6 +435,7 @@
 				EF2AD6DB2BA275750055DF65 /* NetworkManagerTests.swift in Sources */,
 				EFAAAD4B2BA25735004A079C /* NavigationControllerFactoryTests.swift in Sources */,
 				EFAAAD452BA25353004A079C /* TestNavigationController.swift in Sources */,
+				EF2AD6DF2BA28F520055DF65 /* RaceResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
