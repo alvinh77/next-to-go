@@ -36,6 +36,10 @@ public actor RaceRespository: RaceRespositoryProcotol {
 
     public func fetchRaces(filter: RaceFilter, forceUpdate: Bool) async throws -> RaceListViewModel {
         let response: RaceResponse
+        /*
+         If force update is not required and cached resposne
+         is available, returns cached response directly.
+         */
         if !forceUpdate, let cachedResponse {
             response = cachedResponse
         } else {
@@ -50,6 +54,7 @@ public actor RaceRespository: RaceRespositoryProcotol {
                     ]
                 )
             )
+            // Cache the response from backend
             self.cachedResponse = response
         }
         return mapper.map(response, filter: filter, maxReturnCount: maxReturnCount)

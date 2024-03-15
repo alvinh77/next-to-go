@@ -26,6 +26,18 @@ final class AppDependenciesTests: XCTestCase {
             appDependencies.appConfiguration.baseURL,
             "https://www.test.com"
         )
+        XCTAssertEqual(
+            appDependencies.appConfiguration.refreshDurationInSeconds,
+            50.0
+        )
+        XCTAssertEqual(
+            appDependencies.appConfiguration.maxFetchCount,
+            100
+        )
+        XCTAssertEqual(
+            appDependencies.appConfiguration.maxReturnCount,
+            5
+        )
         XCTAssertTrue(appDependencies.rootViewController is TestNavigationController)
     }
 }

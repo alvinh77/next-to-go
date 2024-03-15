@@ -7,6 +7,9 @@
 
 import UIKit
 
+/*
+ Wrapup protocol for `UINavigationController` which will be injected into app
+ */
 @MainActor public protocol NavigationControllerProtocol: UIViewController {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
     func popViewController(animated: Bool) -> UIViewController?

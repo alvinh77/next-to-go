@@ -34,13 +34,12 @@ public struct RaceViewControllerFactory: RaceViewControllerFactoryProtocol {
     }
 
     public func makeRaceViewController(router: RaceRouting) -> UIViewController {
-        let mapper = RaceMapper()
         let networkManager = NetworkManager(serverSession: serverSession)
         let repository = RaceRespository(
             baseURL: baseURL,
             maxFetchCount: maxFetchCount,
             maxReturnCount: maxReturnCount,
-            mapper: mapper,
+            mapper: RaceMapper(),
             networkManager: networkManager
         )
         let presenter = RacePresenter(

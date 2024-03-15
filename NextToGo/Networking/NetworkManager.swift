@@ -27,6 +27,7 @@ public struct NetworkManager: NetworkManaging {
     private func getResponse(from request: URLRequest) async throws -> Data {
         do {
             let (data, response) = try await serverSession.data(for: request)
+            // Filtered out non-2XX status code in response
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode,
                   (200...299).contains(statusCode) else {
                 throw APIError.networking

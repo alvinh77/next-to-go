@@ -5,6 +5,9 @@
 //  Created by Alvin He on 15/3/2024.
 //
 
+/*
+ Will be injected into prenters to be responsible for routing
+ */
 @MainActor public protocol AppRouting: OnboardingRouting, RaceRouting, PopRouting {}
 
 @MainActor public protocol OnboardingRouting {

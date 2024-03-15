@@ -23,6 +23,7 @@ public final class AppDependencies: AppDependenciesProtocol {
         self.appRouter = appRouter
         self.navigationControllerFactory = navigationControllerFactory
         self.navigationController = navigationController
+        // Display the race screen to window
         appRouter.routeToRace()
     }
 

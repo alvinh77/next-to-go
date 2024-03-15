@@ -7,6 +7,9 @@
 
 import Foundation
 
+/*
+ Wrapup protocol for `URLSession` which will be injected into app
+ */
 public protocol ServerSession: Sendable {
     func data(for request: URLRequest) async throws -> (Data, URLResponse)
 }

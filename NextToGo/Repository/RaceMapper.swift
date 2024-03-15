@@ -33,6 +33,7 @@ public struct RaceMapper: RaceMapping, @unchecked Sendable {
         var summaries = response.identifiers.compactMap {
             response.summariesDictionary[$0]
         }
+        // Prepare filters for local filtering
         let categoryIds = filter.categoryIds
         if filter.categoryIds.count > 0 {
             summaries = summaries.filter {
@@ -40,6 +41,7 @@ public struct RaceMapper: RaceMapping, @unchecked Sendable {
             }
         }
         let items = summaries.compactMap { summary -> RaceItemViewModel? in
+            // Filtered out already started races
             guard Double(summary.advisedStart) > dateInSeconds else { return nil }
             var detail = "Race Number: \(summary.number)"
             if let categoryName = RaceFilter(categoryId: summary.categoryId)?.name {
@@ -51,7 +53,7 @@ public struct RaceMapper: RaceMapping, @unchecked Sendable {
                 detail: detail,
                 startTime: summary.advisedStart
             )
-        }.prefix(maxReturnCount)
+        }.prefix(maxReturnCount) // Only display the top N races in the list
         return RaceListViewModel(items: Array(items))
     }
 }
