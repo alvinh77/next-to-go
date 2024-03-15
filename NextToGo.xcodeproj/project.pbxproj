@@ -35,6 +35,16 @@
 		EF2AD6F52BA2D3860055DF65 /* ViewControllerLifecycleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6F42BA2D3860055DF65 /* ViewControllerLifecycleDelegate.swift */; };
 		EF2AD6F72BA3ADE50055DF65 /* TestRaceViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6F62BA3ADE50055DF65 /* TestRaceViewControllerFactory.swift */; };
 		EF6D98F12BA188C700C02262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */; };
+		EF7F52152BA3C92900B223EF /* FilterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52142BA3C92900B223EF /* FilterItemView.swift */; };
+		EF7F52172BA3CBD600B223EF /* FilterItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52162BA3CBD600B223EF /* FilterItemViewModel.swift */; };
+		EF7F52192BA3CC3000B223EF /* FilterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52182BA3CC3000B223EF /* FilterListViewModel.swift */; };
+		EF7F521B2BA3CD9000B223EF /* FilterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F521A2BA3CD9000B223EF /* FilterListView.swift */; };
+		EF7F521D2BA3CF2B00B223EF /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F521C2BA3CF2B00B223EF /* FilterScreen.swift */; };
+		EF7F521F2BA3CF5A00B223EF /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F521E2BA3CF5A00B223EF /* FilterPresenter.swift */; };
+		EF7F52212BA3D78000B223EF /* FilterViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52202BA3D78000B223EF /* FilterViewControllerFactory.swift */; };
+		EF7F52242BA3D8D200B223EF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52232BA3D8D200B223EF /* AppRouter.swift */; };
+		EF7F52282BA3E54300B223EF /* TestAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52272BA3E54300B223EF /* TestAppRouter.swift */; };
+		EF7F522A2BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52292BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift */; };
 		EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */; };
 		EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD302BA1B048004A079C /* AppDependencies.swift */; };
 		EFAAAD342BA1BCA5004A079C /* NavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD332BA1BCA5004A079C /* NavigationControllerProtocol.swift */; };
@@ -93,6 +103,16 @@
 		EF2AD6F42BA2D3860055DF65 /* ViewControllerLifecycleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifecycleDelegate.swift; sourceTree = "<group>"; };
 		EF2AD6F62BA3ADE50055DF65 /* TestRaceViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRaceViewControllerFactory.swift; sourceTree = "<group>"; };
 		EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF7F52142BA3C92900B223EF /* FilterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemView.swift; sourceTree = "<group>"; };
+		EF7F52162BA3CBD600B223EF /* FilterItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemViewModel.swift; sourceTree = "<group>"; };
+		EF7F52182BA3CC3000B223EF /* FilterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewModel.swift; sourceTree = "<group>"; };
+		EF7F521A2BA3CD9000B223EF /* FilterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListView.swift; sourceTree = "<group>"; };
+		EF7F521C2BA3CF2B00B223EF /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
+		EF7F521E2BA3CF5A00B223EF /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
+		EF7F52202BA3D78000B223EF /* FilterViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewControllerFactory.swift; sourceTree = "<group>"; };
+		EF7F52232BA3D8D200B223EF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		EF7F52272BA3E54300B223EF /* TestAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppRouter.swift; sourceTree = "<group>"; };
+		EF7F52292BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAppliedActionDelegate.swift; sourceTree = "<group>"; };
 		EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DefaultConfiguration.xcconfig; sourceTree = "<group>"; };
 		EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFactoryProtocol.swift; sourceTree = "<group>"; };
 		EFAAAD302BA1B048004A079C /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -138,7 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				EF2AD6C82BA262EA0055DF65 /* RacePresenter.swift */,
+				EF7F521E2BA3CF5A00B223EF /* FilterPresenter.swift */,
 				EF2AD6F42BA2D3860055DF65 /* ViewControllerLifecycleDelegate.swift */,
+				EF7F52292BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -180,6 +202,14 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		EF7F52222BA3D8B100B223EF /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				EF7F52232BA3D8D200B223EF /* AppRouter.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
 		EFAAAD2B2BA1AF45004A079C /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,8 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */,
-				EFAAAD302BA1B048004A079C /* AppDependencies.swift */,
 				EFAAAD3A2BA24F42004A079C /* AppDependenciesProtocol.swift */,
+				EFAAAD302BA1B048004A079C /* AppDependencies.swift */,
 				EFAAAD3C2BA25030004A079C /* DefaultAppDependenciesFactory.swift */,
 			);
 			path = AppDependencies;
@@ -218,6 +248,8 @@
 				EF2AD6C32BA261E70055DF65 /* ViewState.swift */,
 				EF2AD6DC2BA28A1F0055DF65 /* RaceResponse.swift */,
 				EF2AD6E32BA2972D0055DF65 /* RaceFilter.swift */,
+				EF7F52162BA3CBD600B223EF /* FilterItemViewModel.swift */,
+				EF7F52182BA3CC3000B223EF /* FilterListViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,6 +282,7 @@
 		EFAAAD432BA2532F004A079C /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				EF7F52272BA3E54300B223EF /* TestAppRouter.swift */,
 				EFAAAD442BA25353004A079C /* TestNavigationController.swift */,
 				EFAAAD482BA25670004A079C /* TestNavigationControllerFactory.swift */,
 				EF2AD6D82BA2746E0055DF65 /* TestServerSession.swift */,
@@ -266,9 +299,13 @@
 				EF2AD6C52BA262A70055DF65 /* RaceScreen.swift */,
 				EF2AD6BF2BA25E480055DF65 /* RaceListView.swift */,
 				EFAAAD4D2BA258AB004A079C /* RaceItemView.swift */,
+				EF7F521C2BA3CF2B00B223EF /* FilterScreen.swift */,
+				EF7F521A2BA3CD9000B223EF /* FilterListView.swift */,
+				EF7F52142BA3C92900B223EF /* FilterItemView.swift */,
 				EF2AD6CA2BA266C60055DF65 /* ActionView.swift */,
 				EFAAAD4F2BA25949004A079C /* Font+System.swift */,
 				EF2AD6F02BA2D0BE0055DF65 /* RaceViewControllerFactory.swift */,
+				EF7F52202BA3D78000B223EF /* FilterViewControllerFactory.swift */,
 				EF2AD6F22BA2D3060055DF65 /* RaceHostingController.swift */,
 			);
 			path = Views;
@@ -303,6 +340,7 @@
 				EFAAAD372BA24EF2004A079C /* Models */,
 				EFAAAD322BA1BC40004A079C /* Navigation */,
 				EF2AD6CE2BA26BE60055DF65 /* Networking */,
+				EF7F52222BA3D8B100B223EF /* Routing */,
 				EFAAAD2B2BA1AF45004A079C /* Configurations */,
 				EFABA6302BA17C4100CA5C13 /* SupportFiles */,
 				EFABA60C2BA179E900CA5C13 /* Preview Content */,
@@ -445,11 +483,16 @@
 			files = (
 				EFAAAD362BA1BD39004A079C /* NavigationControllerFactory.swift in Sources */,
 				EF2AD6E62BA29ABE0055DF65 /* RaceMapper.swift in Sources */,
+				EF7F52192BA3CC3000B223EF /* FilterListViewModel.swift in Sources */,
 				EF2AD6E22BA296C10055DF65 /* RaceRespository.swift in Sources */,
 				EF2AD6D22BA26D2C0055DF65 /* APIRequest.swift in Sources */,
+				EF7F521B2BA3CD9000B223EF /* FilterListView.swift in Sources */,
+				EF7F52152BA3C92900B223EF /* FilterItemView.swift in Sources */,
 				EF2AD6F32BA2D3060055DF65 /* RaceHostingController.swift in Sources */,
 				EFAAAD3D2BA25030004A079C /* DefaultAppDependenciesFactory.swift in Sources */,
+				EF7F521D2BA3CF2B00B223EF /* FilterScreen.swift in Sources */,
 				EF2AD6C42BA261E70055DF65 /* ViewState.swift in Sources */,
+				EF7F52212BA3D78000B223EF /* FilterViewControllerFactory.swift in Sources */,
 				EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */,
 				EFAAAD3B2BA24F42004A079C /* AppDependenciesProtocol.swift in Sources */,
 				EFAAAD502BA25949004A079C /* Font+System.swift in Sources */,
@@ -460,8 +503,11 @@
 				EF2AD6F52BA2D3860055DF65 /* ViewControllerLifecycleDelegate.swift in Sources */,
 				EF2AD6C02BA25E480055DF65 /* RaceListView.swift in Sources */,
 				EFABA6322BA17CB400CA5C13 /* AppDelegate.swift in Sources */,
+				EF7F522A2BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift in Sources */,
 				EF2AD6D62BA26EB40055DF65 /* APIError.swift in Sources */,
+				EF7F52172BA3CBD600B223EF /* FilterItemViewModel.swift in Sources */,
 				EF2AD6C22BA25E660055DF65 /* RaceListViewModel.swift in Sources */,
+				EF7F52242BA3D8D200B223EF /* AppRouter.swift in Sources */,
 				EF2AD6D02BA26C810055DF65 /* NetworkManager.swift in Sources */,
 				EF2AD6CB2BA266C60055DF65 /* ActionView.swift in Sources */,
 				EF2AD6C92BA262EA0055DF65 /* RacePresenter.swift in Sources */,
@@ -471,6 +517,7 @@
 				EF2AD6D42BA26E110055DF65 /* ServerSession.swift in Sources */,
 				EF2AD6E42BA2972D0055DF65 /* RaceFilter.swift in Sources */,
 				EFAAAD342BA1BCA5004A079C /* NavigationControllerProtocol.swift in Sources */,
+				EF7F521F2BA3CF5A00B223EF /* FilterPresenter.swift in Sources */,
 				EF2AD6CD2BA266E80055DF65 /* ActionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,6 +528,7 @@
 			files = (
 				EFAAAD492BA25670004A079C /* TestNavigationControllerFactory.swift in Sources */,
 				EF2AD6D92BA2746E0055DF65 /* TestServerSession.swift in Sources */,
+				EF7F52282BA3E54300B223EF /* TestAppRouter.swift in Sources */,
 				EF2AD6E92BA2A0EB0055DF65 /* RaceMapperTests.swift in Sources */,
 				EFAAAD472BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift in Sources */,
 				EF2AD6EF2BA2AD930055DF65 /* TestNetworkManager.swift in Sources */,

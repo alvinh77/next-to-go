@@ -9,6 +9,7 @@ import UIKit
 
 @MainActor public protocol NavigationControllerProtocol: UIViewController {
     func pushViewController(_ viewController: UIViewController, animated: Bool)
+    func popViewController(animated: Bool) -> UIViewController?
 }
 
 extension UINavigationController: NavigationControllerProtocol {}

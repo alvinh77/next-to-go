@@ -20,4 +20,8 @@ public struct TestRaceViewControllerFactory: RaceViewControllerFactoryProtocol {
     public func makeRaceViewController() -> UIViewController {
         viewController
     }
+
+    public func makeRaceViewController(router: any NextToGo.RaceRouting) -> UIViewController {
+        viewController
+    }
 }

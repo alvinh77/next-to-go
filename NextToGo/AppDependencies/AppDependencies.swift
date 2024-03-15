@@ -9,23 +9,21 @@ import UIKit
 
 public final class AppDependencies: AppDependenciesProtocol {
     public let appConfiguration: AppConfiguration
-    private let navigationController: NavigationControllerProtocol
+    private let appRouter: AppRouting
     private let navigationControllerFactory: NavigationControllerFactoryProtocol
-    private let raceViewControllerFactory: RaceViewControllerFactoryProtocol
+    private let navigationController: NavigationControllerProtocol
 
     public init(
         appConfiguration: AppConfiguration,
+        appRouter: AppRouting,
         navigationControllerFactory: NavigationControllerFactoryProtocol,
-        raceViewControllerFactory: RaceViewControllerFactoryProtocol
+        navigationController: NavigationControllerProtocol
     ) {
         self.appConfiguration = appConfiguration
+        self.appRouter = appRouter
         self.navigationControllerFactory = navigationControllerFactory
-        self.raceViewControllerFactory = raceViewControllerFactory
-        self.navigationController = navigationControllerFactory.makeNavigationController()
-        self.navigationController.pushViewController(
-            raceViewControllerFactory.makeRaceViewController(),
-            animated: false
-        )
+        self.navigationController = navigationController
+        appRouter.routeToRace()
     }
 
     public var rootViewController: UIViewController {

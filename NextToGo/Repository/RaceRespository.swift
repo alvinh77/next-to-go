@@ -14,16 +14,22 @@ public protocol RaceRespositoryProcotol: Sendable {
 
 public actor RaceRespository: RaceRespositoryProcotol {
     private let baseURL: String
+    private let maxFetchCount: Int
+    private let maxReturnCount: Int
     private let networkManager: NetworkManaging
     private let mapper: RaceMapping
     private var cachedResponse: RaceResponse?
 
     public init(
         baseURL: String,
+        maxFetchCount: Int,
+        maxReturnCount: Int,
         mapper: RaceMapping,
         networkManager: NetworkManaging
     ) {
         self.baseURL = baseURL
+        self.maxFetchCount = maxFetchCount
+        self.maxReturnCount = maxReturnCount
         self.mapper = mapper
         self.networkManager = networkManager
     }
@@ -38,11 +44,14 @@ public actor RaceRespository: RaceRespositoryProcotol {
                     baseURL: baseURL,
                     path: "/rest/v1/racing/",
                     method: .get,
-                    parameters: ["method": "nextraces", "count": "10"]
+                    parameters: [
+                        "method": "nextraces",
+                        "count": "\(maxFetchCount)"
+                    ]
                 )
             )
             self.cachedResponse = response
         }
-        return mapper.map(response, filter: filter)
+        return mapper.map(response, filter: filter, maxReturnCount: maxReturnCount)
     }
 }

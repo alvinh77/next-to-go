@@ -38,34 +38,34 @@ final class RaceMapperTests: XCTestCase {
     )
 
     func test_map_whenNoFilterApplied() {
-        let result = RaceMapper().map(response, filter: .none)
+        let result = RaceMapper().map(response, filter: .none, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 3)
         let lastItem = result.items[2]
         XCTAssertEqual(lastItem.id, "id3")
         XCTAssertEqual(lastItem.title, "Meeting Name: name3")
-        XCTAssertEqual(lastItem.detail, "Race Number: 33")
+        XCTAssertEqual(lastItem.detail, "Horse Race Number: 33")
         XCTAssertEqual(lastItem.countdown, 333)
     }
 
     func test_map_whenAllFiltersApplied() {
-        let result = RaceMapper().map(response, filter: .all)
+        let result = RaceMapper().map(response, filter: .all, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 3)
     }
 
     func test_map_whenGreyhoundFiltersApplied() {
-        let result = RaceMapper().map(response, filter: .greyhound)
+        let result = RaceMapper().map(response, filter: .greyhound, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 1)
         XCTAssertEqual(result.items[0].id, "id1")
     }
 
     func test_map_whenHarnessFiltersApplied() {
-        let result = RaceMapper().map(response, filter: .harness)
+        let result = RaceMapper().map(response, filter: .harness, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 1)
         XCTAssertEqual(result.items[0].id, "id2")
     }
 
     func test_map_whenHorseFiltersApplied() {
-        let result = RaceMapper().map(response, filter: .horse)
+        let result = RaceMapper().map(response, filter: .horse, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 1)
         XCTAssertEqual(result.items[0].id, "id3")
     }

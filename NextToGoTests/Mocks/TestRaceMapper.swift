@@ -24,13 +24,24 @@ public final class TestRaceMapper: RaceMapping, @unchecked Sendable {
         self.viewModel = viewModel
     }
 
-    public func map(_ response: RaceResponse, filter: RaceFilter) -> RaceListViewModel {
-        mapCalls.append(.init(response: response, filter: filter))
+    public func map(
+        _ response: RaceResponse,
+        filter: RaceFilter,
+        maxReturnCount: Int
+    ) -> RaceListViewModel {
+        mapCalls.append(
+            .init(
+                response: response,
+                filter: filter,
+                maxReturnCount: maxReturnCount
+            )
+        )
         return viewModel
     }
 
     public struct MapCall {
-        let response: RaceResponse
-        let filter: RaceFilter
+        public let response: RaceResponse
+        public let filter: RaceFilter
+        public let maxReturnCount: Int
     }
 }

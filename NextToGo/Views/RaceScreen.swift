@@ -24,12 +24,34 @@ public struct RaceScreen<Presenter: RacePresenterProtocol>: View {
             ProgressView()
                 .controlSize(.large)
         case let .success(listViewModel):
-            RaceListView(model: listViewModel)
+            successView(listViewModel)
         case let .action(actionViewModel):
             ActionView(model: actionViewModel)
         }
     }
 }
+
+// MARK: - Helper
+
+extension RaceScreen {
+    private func successView(_ model: RaceListViewModel) -> some View {
+        VStack(spacing: 0) {
+            RaceListView(model: model)
+            Button {
+                presenter.onFilter()
+            } label: {
+                Text("Filters")
+                    .font(.systemTitle)
+                    .tint(Color.white)
+                    .frame(height: 44)
+                    .frame(maxWidth: .infinity)
+            }
+            .background(Color.orange.ignoresSafeArea())
+        }
+    }
+}
+
+// MARK: - Preview
 
 struct RaceScreen_Previews: PreviewProvider {
     typealias State = ViewState<RaceListViewModel, ActionViewModel>
@@ -41,14 +63,15 @@ struct RaceScreen_Previews: PreviewProvider {
         RaceScreen(presenter: TestPresenter(viewState: .action(actionModel)))
     }
 
-    private class TestPresenter: RacePresenterProtocol, @unchecked Sendable {
-        var viewState: State
+    @MainActor private class TestPresenter: RacePresenterProtocol {
+        let viewState: State
         init(
             viewState: State = .notStarted
         ) {
             self.viewState = viewState
         }
-        func loadData() {}
+        nonisolated func loadData() {}
+        nonisolated func onFilter() {}
     }
 
     static var successModel: RaceListViewModel {

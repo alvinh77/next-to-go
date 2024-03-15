@@ -24,6 +24,8 @@ final class RaceRespositoryTests: XCTestCase {
         )
         respository = .init(
             baseURL: "https://www.test.com",
+            maxFetchCount: 100,
+            maxReturnCount: 5,
             mapper: mapper,
             networkManager: networkManager
         )
@@ -42,7 +44,7 @@ final class RaceRespositoryTests: XCTestCase {
         XCTAssertEqual(dataCall.baseURL, "https://www.test.com")
         XCTAssertEqual(dataCall.method, .get)
         XCTAssertEqual(dataCall.path, "/rest/v1/racing/")
-        XCTAssertEqual(dataCall.parameters, ["method": "nextraces", "count": "10"])
+        XCTAssertEqual(dataCall.parameters, ["method": "nextraces", "count": "100"])
         XCTAssertEqual(model.items.count, 1)
         XCTAssertEqual(mapper.mapCalls.count, 1)
         let mapCall = mapper.mapCalls[0]

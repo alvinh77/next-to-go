@@ -9,23 +9,41 @@ import UIKit
 import SwiftUI
 
 @MainActor public protocol RaceViewControllerFactoryProtocol {
-    func makeRaceViewController() -> UIViewController
+    func makeRaceViewController(router: RaceRouting) -> UIViewController
 }
 
 public struct RaceViewControllerFactory: RaceViewControllerFactoryProtocol {
     private let baseURL: String
+    private let maxFetchCount: Int
+    private let maxReturnCount: Int
     private let serverSession: ServerSession
 
-    public init(baseURL: String, serverSession: ServerSession) {
+    public init(
+        baseURL: String,
+        maxFetchCount: Int,
+        maxReturnCount: Int,
+        serverSession: ServerSession
+    ) {
         self.baseURL = baseURL
+        self.maxFetchCount = maxFetchCount
+        self.maxReturnCount = maxReturnCount
         self.serverSession = serverSession
     }
 
-    public func makeRaceViewController() -> UIViewController {
+    public func makeRaceViewController(router: RaceRouting) -> UIViewController {
         let mapper = RaceMapper()
         let networkManager = NetworkManager(serverSession: serverSession)
-        let repository = RaceRespository(baseURL: baseURL, mapper: mapper, networkManager: networkManager)
-        let presenter = RacePresenter(repository: repository)
+        let repository = RaceRespository(
+            baseURL: baseURL,
+            maxFetchCount: maxFetchCount,
+            maxReturnCount: maxReturnCount,
+            mapper: mapper,
+            networkManager: networkManager
+        )
+        let presenter = RacePresenter(
+            repository: repository,
+            router: router
+        )
         let screen = RaceScreen(presenter: presenter)
         let viewController = RaceHostingController(rootView: screen)
         viewController.title = "Next To Go"

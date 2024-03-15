@@ -12,9 +12,14 @@ import XCTest
 final class AppDependenciesTests: XCTestCase {
     @MainActor func test_rootViewController() {
         let appDependencies = AppDependencies(
-            appConfiguration: AppConfiguration(baseURL: "https://www.test.com"),
+            appConfiguration: AppConfiguration(
+                baseURL: "https://www.test.com",
+                maxFetchCount: 100,
+                maxReturnCount: 5
+            ),
+            appRouter: TestAppRouter(),
             navigationControllerFactory: TestNavigationControllerFactory(),
-            raceViewControllerFactory: TestRaceViewControllerFactory()
+            navigationController: TestNavigationController()
         )
         XCTAssertEqual(
             appDependencies.appConfiguration.baseURL,
