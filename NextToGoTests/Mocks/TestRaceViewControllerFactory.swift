@@ -8,7 +8,8 @@
 import NextToGo
 import UIKit
 
-public struct TestRaceViewControllerFactory: RaceViewControllerFactoryProtocol {
+public final class TestRaceViewControllerFactory: RaceViewControllerFactoryProtocol {
+    public private(set) var makeCalls = [RaceRouting]()
     public var viewController: UIViewController
 
     public init(
@@ -17,11 +18,8 @@ public struct TestRaceViewControllerFactory: RaceViewControllerFactoryProtocol {
         self.viewController = viewController
     }
 
-    public func makeRaceViewController() -> UIViewController {
-        viewController
-    }
-
-    public func makeRaceViewController(router: any NextToGo.RaceRouting) -> UIViewController {
-        viewController
+    public func makeRaceViewController(router: RaceRouting) -> UIViewController {
+        makeCalls.append(router)
+        return viewController
     }
 }

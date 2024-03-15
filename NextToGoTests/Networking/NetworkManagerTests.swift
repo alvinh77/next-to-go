@@ -33,8 +33,8 @@ final class NetworkManagerTests: XCTestCase {
     }
 
     func test_data_whenServerSessionThrowsError() async {
-        let request = APIRequest(baseURL: "https://www.test.com", path: "/api", method: .get)
         serverSession.error = .init()
+        let request = APIRequest(baseURL: "https://www.test.com", path: "/api", method: .get)
         do {
             let _: TestModel = try await manager.data(from: request)
             XCTFail("An error is expected to be thrown")

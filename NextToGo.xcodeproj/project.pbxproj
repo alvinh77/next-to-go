@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2328F92BA415C0000A5944 /* RaceViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2328F82BA415C0000A5944 /* RaceViewControllerFactoryTests.swift */; };
+		EF2328FB2BA41727000A5944 /* FilterViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2328FA2BA41727000A5944 /* FilterViewControllerFactoryTests.swift */; };
+		EF2329002BA417E4000A5944 /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2328FF2BA417E4000A5944 /* AppRouterTests.swift */; };
+		EF2329022BA41822000A5944 /* TestFilterViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2329012BA41822000A5944 /* TestFilterViewControllerFactory.swift */; };
+		EF2329042BA41CD8000A5944 /* RaceHostingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2329032BA41CD8000A5944 /* RaceHostingControllerTests.swift */; };
+		EF2329062BA41DAC000A5944 /* CountdownMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2329052BA41DAC000A5944 /* CountdownMapperTests.swift */; };
+		EF2329082BA41EAA000A5944 /* ViewStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2329072BA41EAA000A5944 /* ViewStateTests.swift */; };
+		EF23290A2BA41F6B000A5944 /* RaceFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2329092BA41F6B000A5944 /* RaceFilterTests.swift */; };
+		EF23290C2BA421E8000A5944 /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23290B2BA421E8000A5944 /* APIRequestTests.swift */; };
 		EF2AD6BE2BA25D440055DF65 /* RaceItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6BD2BA25D440055DF65 /* RaceItemViewModel.swift */; };
 		EF2AD6C02BA25E480055DF65 /* RaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6BF2BA25E480055DF65 /* RaceListView.swift */; };
 		EF2AD6C22BA25E660055DF65 /* RaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6C12BA25E660055DF65 /* RaceListViewModel.swift */; };
@@ -76,6 +85,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF2328F82BA415C0000A5944 /* RaceViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewControllerFactoryTests.swift; sourceTree = "<group>"; };
+		EF2328FA2BA41727000A5944 /* FilterViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewControllerFactoryTests.swift; sourceTree = "<group>"; };
+		EF2328FF2BA417E4000A5944 /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
+		EF2329012BA41822000A5944 /* TestFilterViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFilterViewControllerFactory.swift; sourceTree = "<group>"; };
+		EF2329032BA41CD8000A5944 /* RaceHostingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceHostingControllerTests.swift; sourceTree = "<group>"; };
+		EF2329052BA41DAC000A5944 /* CountdownMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownMapperTests.swift; sourceTree = "<group>"; };
+		EF2329072BA41EAA000A5944 /* ViewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateTests.swift; sourceTree = "<group>"; };
+		EF2329092BA41F6B000A5944 /* RaceFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceFilterTests.swift; sourceTree = "<group>"; };
+		EF23290B2BA421E8000A5944 /* APIRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestTests.swift; sourceTree = "<group>"; };
 		EF2AD6BD2BA25D440055DF65 /* RaceItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemViewModel.swift; sourceTree = "<group>"; };
 		EF2AD6BF2BA25E480055DF65 /* RaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListView.swift; sourceTree = "<group>"; };
 		EF2AD6C12BA25E660055DF65 /* RaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewModel.swift; sourceTree = "<group>"; };
@@ -156,6 +174,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF2328F72BA415A2000A5944 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF2328F82BA415C0000A5944 /* RaceViewControllerFactoryTests.swift */,
+				EF2328FA2BA41727000A5944 /* FilterViewControllerFactoryTests.swift */,
+				EF2329032BA41CD8000A5944 /* RaceHostingControllerTests.swift */,
+				EF2329052BA41DAC000A5944 /* CountdownMapperTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF2328FE2BA417D7000A5944 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				EF2328FF2BA417E4000A5944 /* AppRouterTests.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
 		EF2AD6C72BA262D40055DF65 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				EF2AD6DA2BA275750055DF65 /* NetworkManagerTests.swift */,
+				EF23290B2BA421E8000A5944 /* APIRequestTests.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -269,6 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				EF2AD6DE2BA28F520055DF65 /* RaceResponseTests.swift */,
+				EF2329072BA41EAA000A5944 /* ViewStateTests.swift */,
+				EF2329092BA41F6B000A5944 /* RaceFilterTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -291,6 +331,7 @@
 				EF2AD6EA2BA2A8AE0055DF65 /* TestRaceMapper.swift */,
 				EF2AD6EE2BA2AD930055DF65 /* TestNetworkManager.swift */,
 				EF2AD6F62BA3ADE50055DF65 /* TestRaceViewControllerFactory.swift */,
+				EF2329012BA41822000A5944 /* TestFilterViewControllerFactory.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -337,13 +378,13 @@
 			children = (
 				EFABA6312BA17CB400CA5C13 /* AppDelegate.swift */,
 				EFAAAD2D2BA1AFE2004A079C /* AppDependencies */,
+				EF7F52222BA3D8B100B223EF /* Routing */,
 				EFAAAD4C2BA2584A004A079C /* Views */,
 				EF2AD6C72BA262D40055DF65 /* Presenter */,
 				EF2AD6E02BA296890055DF65 /* Repository */,
 				EFAAAD372BA24EF2004A079C /* Models */,
 				EFAAAD322BA1BC40004A079C /* Navigation */,
 				EF2AD6CE2BA26BE60055DF65 /* Networking */,
-				EF7F52222BA3D8B100B223EF /* Routing */,
 				EFAAAD2B2BA1AF45004A079C /* Configurations */,
 				EFABA6302BA17C4100CA5C13 /* SupportFiles */,
 				EFABA60C2BA179E900CA5C13 /* Preview Content */,
@@ -364,6 +405,8 @@
 			children = (
 				EFAAAD432BA2532F004A079C /* Mocks */,
 				EFAAAD3E2BA251E7004A079C /* AppDependencies */,
+				EF2328FE2BA417D7000A5944 /* Routing */,
+				EF2328F72BA415A2000A5944 /* Views */,
 				EF2AD6E72BA2A0D10055DF65 /* Repository */,
 				EFAAAD3F2BA251F8004A079C /* Models */,
 				EFAAAD402BA251FF004A079C /* Navigation */,
@@ -531,17 +574,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAAAD492BA25670004A079C /* TestNavigationControllerFactory.swift in Sources */,
+				EF2328FB2BA41727000A5944 /* FilterViewControllerFactoryTests.swift in Sources */,
 				EF2AD6D92BA2746E0055DF65 /* TestServerSession.swift in Sources */,
+				EF2329082BA41EAA000A5944 /* ViewStateTests.swift in Sources */,
 				EF7F52282BA3E54300B223EF /* TestAppRouter.swift in Sources */,
 				EF2AD6E92BA2A0EB0055DF65 /* RaceMapperTests.swift in Sources */,
+				EF2329002BA417E4000A5944 /* AppRouterTests.swift in Sources */,
 				EFAAAD472BA25472004A079C /* DefaultAppDependenciesFactoryTests.swift in Sources */,
+				EF2328F92BA415C0000A5944 /* RaceViewControllerFactoryTests.swift in Sources */,
+				EF2329042BA41CD8000A5944 /* RaceHostingControllerTests.swift in Sources */,
 				EF2AD6EF2BA2AD930055DF65 /* TestNetworkManager.swift in Sources */,
+				EF2329062BA41DAC000A5944 /* CountdownMapperTests.swift in Sources */,
 				EF2AD6ED2BA2AD680055DF65 /* RaceRespositoryTests.swift in Sources */,
 				EFAAAD422BA252B8004A079C /* AppDependenciesTests.swift in Sources */,
+				EF23290A2BA41F6B000A5944 /* RaceFilterTests.swift in Sources */,
+				EF2329022BA41822000A5944 /* TestFilterViewControllerFactory.swift in Sources */,
 				EF2AD6DB2BA275750055DF65 /* NetworkManagerTests.swift in Sources */,
 				EF2AD6F72BA3ADE50055DF65 /* TestRaceViewControllerFactory.swift in Sources */,
 				EFAAAD4B2BA25735004A079C /* NavigationControllerFactoryTests.swift in Sources */,
 				EFAAAD452BA25353004A079C /* TestNavigationController.swift in Sources */,
+				EF23290C2BA421E8000A5944 /* APIRequestTests.swift in Sources */,
 				EF2AD6DF2BA28F520055DF65 /* RaceResponseTests.swift in Sources */,
 				EF2AD6EB2BA2A8AE0055DF65 /* TestRaceMapper.swift in Sources */,
 			);
