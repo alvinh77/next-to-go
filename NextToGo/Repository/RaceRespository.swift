@@ -5,7 +5,7 @@
 //  Created by Alvin He on 14/3/2024.
 //
 
-public protocol RaceRespositoryProcotol: Sendable {
+public protocol RaceRespositoryProcotol: Actor {
     func fetchRaces(
         filter: RaceFilter,
         forceUpdate: Bool

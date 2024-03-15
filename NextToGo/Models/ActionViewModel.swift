@@ -5,7 +5,7 @@
 //  Created by Alvin He on 14/3/2024.
 //
 
-public struct ActionViewModel: @unchecked Sendable {
+public struct ActionViewModel {
     public let title: String
     public let detail: String
     public let actionTitle: String

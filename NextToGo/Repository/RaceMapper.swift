@@ -15,11 +15,11 @@ public protocol RaceMapping {
     ) -> RaceListViewModel
 }
 
-public struct RaceMapper: RaceMapping, @unchecked Sendable {
-    private let dateProvider: () -> Date
+public struct RaceMapper: RaceMapping, Sendable {
+    private let dateProvider: @Sendable () -> Date
 
     public init(
-        dateProvider: @escaping () -> Date = { .now }
+        dateProvider: @escaping @Sendable () -> Date = { .now }
     ) {
         self.dateProvider = dateProvider
     }

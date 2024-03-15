@@ -30,8 +30,8 @@ public final class TestFilterViewControllerFactory: FilterViewControllerFactoryP
 
 extension TestFilterViewControllerFactory {
     public struct MakeParams {
-        let filter: RaceFilter
-        let router: PopRouting
-        let delegate: FilterAppliedActionDelegate?
+        public let filter: RaceFilter
+        public let router: PopRouting
+        public let delegate: FilterAppliedActionDelegate?
     }
 }

@@ -17,23 +17,26 @@ import Foundation
 public final class RacePresenter: RacePresenterProtocol {
     private let repository: RaceRespositoryProcotol
     private let router: RaceRouting
+    private let taskFactory: TaskFactoryProtocol
     private var filter: RaceFilter = .none
-    private var inflightTask: Task<Void, Error>?
+    private var inflightTask: Task<Void, Never>?
 
     @Published public private(set) var viewState: ViewState<RaceListViewModel, ActionViewModel> = .notStarted
 
     public init(
         repository: RaceRespositoryProcotol,
-        router: RaceRouting
+        router: RaceRouting,
+        taskFactory: TaskFactoryProtocol
     ) {
         self.repository = repository
         self.router = router
+        self.taskFactory = taskFactory
     }
 
     public func loadData() {
         inflightTask?.cancel()
         if !viewState.isSuccess { viewState = .loading }
-        inflightTask = Task { [filter, repository, weak self] in
+        let operation: @Sendable () async -> Void = { @MainActor [filter, repository, weak self] in
             do {
                 let viewModel = try await repository.fetchRaces(filter: filter, forceUpdate: true)
                 guard !Task.isCancelled else { return }
@@ -44,6 +47,7 @@ public final class RacePresenter: RacePresenterProtocol {
                 self?.handleErrorResult()
             }
         }
+        inflightTask = taskFactory.makeTask(operation: operation)
     }
 
     public func onFilter() {

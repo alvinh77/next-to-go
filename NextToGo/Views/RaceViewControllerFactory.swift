@@ -44,7 +44,8 @@ public struct RaceViewControllerFactory: RaceViewControllerFactoryProtocol {
         )
         let presenter = RacePresenter(
             repository: repository,
-            router: router
+            router: router,
+            taskFactory: TaskFactory()
         )
         let screen = RaceScreen(
             presenter: presenter,
