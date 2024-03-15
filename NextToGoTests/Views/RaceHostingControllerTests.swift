@@ -22,7 +22,7 @@ final class RaceHostingControllerTests: XCTestCase {
 
 extension RaceHostingControllerTests {
     private final class Delegate: ViewControllerLifecycleDelegate {
-        var viewDidLoadCalls = 0
+        private(set) var viewDidLoadCalls = 0
         func viewDidLoad() {
             viewDidLoadCalls += 1
         }

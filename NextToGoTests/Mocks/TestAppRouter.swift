@@ -7,16 +7,30 @@
 
 import NextToGo
 
-final class TestAppRouter: AppRouting {
-    func routeToRace() {
+public final class TestAppRouter: AppRouting {
+    public private(set) var routeToRaceCallsCount = 0
+    public private(set) var routeToFilterCalls = [RouteToFilterParams]()
+    public private(set) var routeBackCallsCount = 0
 
+    public func routeToRace() {
+        routeToRaceCallsCount += 1
     }
 
-    func routeToFilter(filter: RaceFilter, delegate: FilterAppliedActionDelegate?) {
-
+    public func routeToFilter(
+        filter: RaceFilter,
+        delegate: FilterAppliedActionDelegate?
+    ) {
+        routeToFilterCalls.append(.init(filter: filter, delegate: delegate))
     }
 
-    func routeBack() {
+    public func routeBack() {
+        routeBackCallsCount += 1
+    }
+}
 
+extension TestAppRouter {
+    public struct RouteToFilterParams {
+        public let filter: RaceFilter
+        public let delegate: FilterAppliedActionDelegate?
     }
 }
