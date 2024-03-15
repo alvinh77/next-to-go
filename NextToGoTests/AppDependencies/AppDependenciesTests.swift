@@ -14,6 +14,7 @@ final class AppDependenciesTests: XCTestCase {
         let appDependencies = AppDependencies(
             appConfiguration: AppConfiguration(
                 baseURL: "https://www.test.com",
+                refreshDurationInSeconds: 50,
                 maxFetchCount: 100,
                 maxReturnCount: 5
             ),

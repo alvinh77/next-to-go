@@ -9,9 +9,15 @@ import SwiftUI
 
 public struct RaceItemView: View {
     private let model: RaceItemViewModel
+    private let date: Date
+    private let mapper: CountdownMapper = .init()
 
-    public init(model: RaceItemViewModel) {
+    public init(
+        model: RaceItemViewModel,
+        date: Date = .now
+    ) {
         self.model = model
+        self.date = date
     }
 
     public var body: some View {
@@ -25,7 +31,7 @@ public struct RaceItemView: View {
             Spacer()
             Label(
                 title: {
-                    Text("\(model.countdown)")
+                    Text("\(mapper.map(date: date, startTime: model.startTime))")
                         .font(.systemTitle)
                 },
                 icon: {
@@ -43,7 +49,8 @@ public struct RaceItemView: View {
             id: "1",
             title: "Meeting Name",
             detail: "Race Number",
-            countdown: 100
-        )
+            startTime: 100
+        ),
+        date: .init(timeIntervalSince1970: 0)
     ).previewLayout(.sizeThatFits)
 }

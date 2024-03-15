@@ -10,4 +10,13 @@ public enum ViewState<Success: Sendable, Action: Sendable>: Sendable {
     case loading
     case success(Success)
     case action(Action)
+
+    public var isSuccess: Bool {
+        switch self {
+        case .success:
+            return true
+        default:
+            return false
+        }
+    }
 }

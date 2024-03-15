@@ -9,11 +9,23 @@ import Combine
 import SwiftUI
 
 public struct RaceScreen<Presenter: RacePresenterProtocol>: View {
-
     @ObservedObject private var presenter: Presenter
+    @State private var currentDate: Date
+    private let updateTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    private let refreshTimer: Publishers.Autoconnect<Timer.TimerPublisher>
 
-    public init(presenter: Presenter) {
+    public init(
+        presenter: Presenter,
+        currentDate: Date = .now,
+        refreshDurationInSeconds: TimeInterval
+    ) {
         self.presenter = presenter
+        self.currentDate = currentDate
+        self.refreshTimer = Timer.publish(
+            every: refreshDurationInSeconds,
+            on: .main,
+            in: .common
+        ).autoconnect()
     }
 
     public var body: some View {
@@ -36,7 +48,7 @@ public struct RaceScreen<Presenter: RacePresenterProtocol>: View {
 extension RaceScreen {
     private func successView(_ model: RaceListViewModel) -> some View {
         VStack(spacing: 0) {
-            RaceListView(model: model)
+            RaceListView(model: model, date: currentDate)
             Button {
                 presenter.onFilter()
             } label: {
@@ -48,6 +60,12 @@ extension RaceScreen {
             }
             .background(Color.orange.ignoresSafeArea())
         }
+        .onReceive(updateTimer) { date in
+            currentDate = date
+        }
+        .onReceive(refreshTimer) { _ in
+            presenter.loadData()
+        }
     }
 }
 
@@ -57,10 +75,22 @@ struct RaceScreen_Previews: PreviewProvider {
     typealias State = ViewState<RaceListViewModel, ActionViewModel>
 
     static var previews: some View {
-        RaceScreen(presenter: TestPresenter(viewState: .notStarted))
-        RaceScreen(presenter: TestPresenter(viewState: .loading))
-        RaceScreen(presenter: TestPresenter(viewState: .success(successModel)))
-        RaceScreen(presenter: TestPresenter(viewState: .action(actionModel)))
+        RaceScreen(
+            presenter: TestPresenter(viewState: .notStarted),
+            refreshDurationInSeconds: 60
+        )
+        RaceScreen(
+            presenter: TestPresenter(viewState: .loading),
+            refreshDurationInSeconds: 60
+        )
+        RaceScreen(
+            presenter: TestPresenter(viewState: .success(successModel)),
+            refreshDurationInSeconds: 60
+        )
+        RaceScreen(
+            presenter: TestPresenter(viewState: .action(actionModel)),
+            refreshDurationInSeconds: 60
+        )
     }
 
     @MainActor private class TestPresenter: RacePresenterProtocol {
@@ -81,7 +111,7 @@ struct RaceScreen_Previews: PreviewProvider {
                     id: "\($0)",
                     title: "Meeting Name \($0)",
                     detail: "Race Number \($0)",
-                    countdown: 100 + $0
+                    startTime: 100 + $0
                 )
             }
         )

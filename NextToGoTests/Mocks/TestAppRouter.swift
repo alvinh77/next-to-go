@@ -11,11 +11,11 @@ final class TestAppRouter: AppRouting {
     func routeToRace() {
 
     }
-    
+
     func routeToFilter(filter: RaceFilter, delegate: FilterAppliedActionDelegate?) {
 
     }
-    
+
     func routeBack() {
 
     }

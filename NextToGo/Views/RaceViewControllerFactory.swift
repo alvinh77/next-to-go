@@ -14,17 +14,20 @@ import SwiftUI
 
 public struct RaceViewControllerFactory: RaceViewControllerFactoryProtocol {
     private let baseURL: String
+    private let refreshDurationInSeconds: TimeInterval
     private let maxFetchCount: Int
     private let maxReturnCount: Int
     private let serverSession: ServerSession
 
     public init(
         baseURL: String,
+        refreshDurationInSeconds: TimeInterval,
         maxFetchCount: Int,
         maxReturnCount: Int,
         serverSession: ServerSession
     ) {
         self.baseURL = baseURL
+        self.refreshDurationInSeconds = refreshDurationInSeconds
         self.maxFetchCount = maxFetchCount
         self.maxReturnCount = maxReturnCount
         self.serverSession = serverSession
@@ -44,7 +47,10 @@ public struct RaceViewControllerFactory: RaceViewControllerFactoryProtocol {
             repository: repository,
             router: router
         )
-        let screen = RaceScreen(presenter: presenter)
+        let screen = RaceScreen(
+            presenter: presenter,
+            refreshDurationInSeconds: refreshDurationInSeconds
+        )
         let viewController = RaceHostingController(rootView: screen)
         viewController.title = "Next To Go"
         viewController.delegate = presenter

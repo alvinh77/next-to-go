@@ -5,6 +5,8 @@
 //  Created by Alvin He on 14/3/2024.
 //
 
+import Foundation
+
 public protocol RaceMapping {
     func map(
         _ response: RaceResponse,
@@ -13,14 +15,21 @@ public protocol RaceMapping {
     ) -> RaceListViewModel
 }
 
-public struct RaceMapper: RaceMapping, Sendable {
-    public init() {}
+public struct RaceMapper: RaceMapping, @unchecked Sendable {
+    private let dateProvider: () -> Date
+
+    public init(
+        dateProvider: @escaping () -> Date = { .now }
+    ) {
+        self.dateProvider = dateProvider
+    }
 
     public func map(
         _ response: RaceResponse,
         filter: RaceFilter,
         maxReturnCount: Int
     ) -> RaceListViewModel {
+        let dateInSeconds = dateProvider().timeIntervalSince1970
         var summaries = response.identifiers.compactMap {
             response.summariesDictionary[$0]
         }
@@ -30,16 +39,17 @@ public struct RaceMapper: RaceMapping, Sendable {
                 categoryIds.contains($0.categoryId)
             }
         }
-        let items = summaries.map {
-            var detail = "Race Number: \($0.number)"
-            if let categoryName = RaceFilter(categoryId: $0.categoryId)?.name {
+        let items = summaries.compactMap { summary -> RaceItemViewModel? in
+            guard Double(summary.advisedStart) > dateInSeconds else { return nil }
+            var detail = "Race Number: \(summary.number)"
+            if let categoryName = RaceFilter(categoryId: summary.categoryId)?.name {
                 detail = "\(categoryName) \(detail)"
             }
             return RaceItemViewModel(
-                id: $0.identifier,
-                title: "Meeting Name: \($0.meetingName)",
+                id: summary.identifier,
+                title: "Meeting Name: \(summary.meetingName)",
                 detail: detail,
-                countdown: $0.advisedStart
+                startTime: summary.advisedStart
             )
         }.prefix(maxReturnCount)
         return RaceListViewModel(items: Array(items))

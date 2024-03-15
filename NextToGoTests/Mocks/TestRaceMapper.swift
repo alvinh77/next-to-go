@@ -17,7 +17,7 @@ public final class TestRaceMapper: RaceMapping, @unchecked Sendable {
                 id: "1",
                 title: "title",
                 detail: "detail",
-                countdown: 1
+                startTime: 1
             )
         ])
     ) {

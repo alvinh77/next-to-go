@@ -32,7 +32,7 @@ public final class RacePresenter: RacePresenterProtocol {
 
     public func loadData() {
         inflightTask?.cancel()
-        viewState = .loading
+        if !viewState.isSuccess { viewState = .loading }
         inflightTask = Task { [filter, repository, weak self] in
             do {
                 let viewModel = try await repository.fetchRaces(filter: filter, forceUpdate: true)

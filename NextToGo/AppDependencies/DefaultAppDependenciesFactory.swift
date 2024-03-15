@@ -11,8 +11,14 @@ public final class DefaultAppDependenciesFactory: AppDependenciesFactoryProtocol
     public init() {}
 
     public var appDependencies: any AppDependenciesProtocol {
+        /*
+         This configuration can be potentially read from
+         remote configuration platform eg. LaunchDarkly
+         or local one eg. configuration files in codebase.
+         */
         let configuration = AppConfiguration(
             baseURL: "https://api.neds.com.au",
+            refreshDurationInSeconds: 50,
             maxFetchCount: 100,
             maxReturnCount: 5
         )
@@ -24,6 +30,7 @@ public final class DefaultAppDependenciesFactory: AppDependenciesFactoryProtocol
                 navigationController: navigationController,
                 raceViewControllerFactory: RaceViewControllerFactory(
                     baseURL: configuration.baseURL,
+                    refreshDurationInSeconds: configuration.refreshDurationInSeconds,
                     maxFetchCount: configuration.maxFetchCount,
                     maxReturnCount: configuration.maxReturnCount,
                     serverSession: URLSession.shared

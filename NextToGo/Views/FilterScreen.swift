@@ -64,4 +64,3 @@ struct FilterScreen_Previews: PreviewProvider {
         nonisolated func onApplyFilters() {}
     }
 }
-

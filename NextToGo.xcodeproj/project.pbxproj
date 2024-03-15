@@ -45,6 +45,7 @@
 		EF7F52242BA3D8D200B223EF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52232BA3D8D200B223EF /* AppRouter.swift */; };
 		EF7F52282BA3E54300B223EF /* TestAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52272BA3E54300B223EF /* TestAppRouter.swift */; };
 		EF7F522A2BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52292BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift */; };
+		EF7F522C2BA3F9BF00B223EF /* CountdownMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F522B2BA3F9BF00B223EF /* CountdownMapper.swift */; };
 		EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */; };
 		EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD302BA1B048004A079C /* AppDependencies.swift */; };
 		EFAAAD342BA1BCA5004A079C /* NavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD332BA1BCA5004A079C /* NavigationControllerProtocol.swift */; };
@@ -113,6 +114,7 @@
 		EF7F52232BA3D8D200B223EF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		EF7F52272BA3E54300B223EF /* TestAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppRouter.swift; sourceTree = "<group>"; };
 		EF7F52292BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAppliedActionDelegate.swift; sourceTree = "<group>"; };
+		EF7F522B2BA3F9BF00B223EF /* CountdownMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownMapper.swift; sourceTree = "<group>"; };
 		EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DefaultConfiguration.xcconfig; sourceTree = "<group>"; };
 		EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFactoryProtocol.swift; sourceTree = "<group>"; };
 		EFAAAD302BA1B048004A079C /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 				EF2AD6F02BA2D0BE0055DF65 /* RaceViewControllerFactory.swift */,
 				EF7F52202BA3D78000B223EF /* FilterViewControllerFactory.swift */,
 				EF2AD6F22BA2D3060055DF65 /* RaceHostingController.swift */,
+				EF7F522B2BA3F9BF00B223EF /* CountdownMapper.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAAAD362BA1BD39004A079C /* NavigationControllerFactory.swift in Sources */,
+				EF7F522C2BA3F9BF00B223EF /* CountdownMapper.swift in Sources */,
 				EF2AD6E62BA29ABE0055DF65 /* RaceMapper.swift in Sources */,
 				EF7F52192BA3CC3000B223EF /* FilterListViewModel.swift in Sources */,
 				EF2AD6E22BA296C10055DF65 /* RaceRespository.swift in Sources */,

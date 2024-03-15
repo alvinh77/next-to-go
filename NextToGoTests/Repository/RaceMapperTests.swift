@@ -11,7 +11,7 @@ import XCTest
 
 final class RaceMapperTests: XCTestCase {
     private var response = RaceResponse(
-        identifiers: ["1", "2", "3"],
+        identifiers: ["1", "2", "3", "4"],
         summariesDictionary: [
             "1": RaceResponse.Summary(
                 identifier: "id1",
@@ -33,39 +33,56 @@ final class RaceMapperTests: XCTestCase {
                 meetingName: "name3",
                 number: 33,
                 advisedStart: 333
+            ),
+            "4": RaceResponse.Summary(
+                identifier: "id4",
+                categoryId: "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+                meetingName: "name4",
+                number: 15,
+                advisedStart: 444
             )
         ]
     )
 
     func test_map_whenNoFilterApplied() {
-        let result = RaceMapper().map(response, filter: .none, maxReturnCount: 5)
+        let result = RaceMapper(
+            dateProvider: { .init(timeIntervalSince1970: 200)}
+        ).map(response, filter: .none, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 3)
         let lastItem = result.items[2]
-        XCTAssertEqual(lastItem.id, "id3")
-        XCTAssertEqual(lastItem.title, "Meeting Name: name3")
-        XCTAssertEqual(lastItem.detail, "Horse Race Number: 33")
-        XCTAssertEqual(lastItem.countdown, 333)
+        XCTAssertEqual(lastItem.id, "id4")
+        XCTAssertEqual(lastItem.title, "Meeting Name: name4")
+        XCTAssertEqual(lastItem.detail, "Greyhound Race Number: 15")
+        XCTAssertEqual(lastItem.startTime, 444)
     }
 
     func test_map_whenAllFiltersApplied() {
-        let result = RaceMapper().map(response, filter: .all, maxReturnCount: 5)
+        let result = RaceMapper(
+            dateProvider: { .init(timeIntervalSince1970: 200)}
+        ).map(response, filter: .all, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 3)
     }
 
     func test_map_whenGreyhoundFiltersApplied() {
-        let result = RaceMapper().map(response, filter: .greyhound, maxReturnCount: 5)
+        let result = RaceMapper(
+            dateProvider: { .init(timeIntervalSince1970: 200)}
+        ).map(response, filter: .greyhound, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 1)
-        XCTAssertEqual(result.items[0].id, "id1")
+        XCTAssertEqual(result.items[0].id, "id4")
     }
 
     func test_map_whenHarnessFiltersApplied() {
-        let result = RaceMapper().map(response, filter: .harness, maxReturnCount: 5)
+        let result = RaceMapper(
+            dateProvider: { .init(timeIntervalSince1970: 200)}
+        ).map(response, filter: .harness, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 1)
         XCTAssertEqual(result.items[0].id, "id2")
     }
 
     func test_map_whenHorseFiltersApplied() {
-        let result = RaceMapper().map(response, filter: .horse, maxReturnCount: 5)
+        let result = RaceMapper(
+            dateProvider: { .init(timeIntervalSince1970: 200)}
+        ).map(response, filter: .horse, maxReturnCount: 5)
         XCTAssertEqual(result.items.count, 1)
         XCTAssertEqual(result.items[0].id, "id3")
     }
