@@ -51,7 +51,7 @@
 		EF7F521D2BA3CF2B00B223EF /* FilterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F521C2BA3CF2B00B223EF /* FilterScreen.swift */; };
 		EF7F521F2BA3CF5A00B223EF /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F521E2BA3CF5A00B223EF /* FilterPresenter.swift */; };
 		EF7F52212BA3D78000B223EF /* FilterViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52202BA3D78000B223EF /* FilterViewControllerFactory.swift */; };
-		EF7F52242BA3D8D200B223EF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52232BA3D8D200B223EF /* AppRouter.swift */; };
+		EF7F52242BA3D8D200B223EF /* Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52232BA3D8D200B223EF /* Routing.swift */; };
 		EF7F52282BA3E54300B223EF /* TestAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52272BA3E54300B223EF /* TestAppRouter.swift */; };
 		EF7F522A2BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52292BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift */; };
 		EF7F522C2BA3F9BF00B223EF /* CountdownMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F522B2BA3F9BF00B223EF /* CountdownMapper.swift */; };
@@ -60,6 +60,7 @@
 		EF96781F2BA4313700C5B5DC /* TestRaceRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96781E2BA4313700C5B5DC /* TestRaceRespository.swift */; };
 		EF9678232BA5098800C5B5DC /* TaskFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9678222BA5098800C5B5DC /* TaskFactory.swift */; };
 		EF9678252BA50CFE00C5B5DC /* TestTaskFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9678242BA50CFE00C5B5DC /* TestTaskFactory.swift */; };
+		EF9678282BA6555700C5B5DC /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9678272BA6555700C5B5DC /* AppRouter.swift */; };
 		EFAAAD2F2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */; };
 		EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD302BA1B048004A079C /* AppDependencies.swift */; };
 		EFAAAD342BA1BCA5004A079C /* NavigationControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAAAD332BA1BCA5004A079C /* NavigationControllerProtocol.swift */; };
@@ -134,7 +135,7 @@
 		EF7F521C2BA3CF2B00B223EF /* FilterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterScreen.swift; sourceTree = "<group>"; };
 		EF7F521E2BA3CF5A00B223EF /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
 		EF7F52202BA3D78000B223EF /* FilterViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewControllerFactory.swift; sourceTree = "<group>"; };
-		EF7F52232BA3D8D200B223EF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		EF7F52232BA3D8D200B223EF /* Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routing.swift; sourceTree = "<group>"; };
 		EF7F52272BA3E54300B223EF /* TestAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppRouter.swift; sourceTree = "<group>"; };
 		EF7F52292BA3EB8C00B223EF /* FilterAppliedActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterAppliedActionDelegate.swift; sourceTree = "<group>"; };
 		EF7F522B2BA3F9BF00B223EF /* CountdownMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownMapper.swift; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 		EF96781E2BA4313700C5B5DC /* TestRaceRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRaceRespository.swift; sourceTree = "<group>"; };
 		EF9678222BA5098800C5B5DC /* TaskFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskFactory.swift; sourceTree = "<group>"; };
 		EF9678242BA50CFE00C5B5DC /* TestTaskFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskFactory.swift; sourceTree = "<group>"; };
+		EF9678272BA6555700C5B5DC /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		EFAAAD2C2BA1AF5D004A079C /* DefaultConfiguration.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DefaultConfiguration.xcconfig; sourceTree = "<group>"; };
 		EFAAAD2E2BA1B011004A079C /* AppDependenciesFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFactoryProtocol.swift; sourceTree = "<group>"; };
 		EFAAAD302BA1B048004A079C /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -256,7 +258,7 @@
 		EF7F52222BA3D8B100B223EF /* Routing */ = {
 			isa = PBXGroup;
 			children = (
-				EF7F52232BA3D8D200B223EF /* AppRouter.swift */,
+				EF7F52232BA3D8D200B223EF /* Routing.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -268,6 +270,14 @@
 				EF96781C2BA430DD00C5B5DC /* RacePresenterTests.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EF9678262BA6551C00C5B5DC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EF9678272BA6555700C5B5DC /* AppRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		EFAAAD2B2BA1AF45004A079C /* Configurations */ = {
@@ -400,10 +410,11 @@
 			children = (
 				EFABA6312BA17CB400CA5C13 /* AppDelegate.swift */,
 				EFAAAD2D2BA1AFE2004A079C /* AppDependencies */,
-				EF7F52222BA3D8B100B223EF /* Routing */,
+				EF9678262BA6551C00C5B5DC /* Router */,
 				EFAAAD4C2BA2584A004A079C /* Views */,
 				EF2AD6C72BA262D40055DF65 /* Presenter */,
 				EF2AD6E02BA296890055DF65 /* Repository */,
+				EF7F52222BA3D8B100B223EF /* Routing */,
 				EFAAAD372BA24EF2004A079C /* Models */,
 				EFAAAD322BA1BC40004A079C /* Navigation */,
 				EF2AD6CE2BA26BE60055DF65 /* Networking */,
@@ -567,6 +578,7 @@
 				EFAAAD312BA1B048004A079C /* AppDependencies.swift in Sources */,
 				EFAAAD3B2BA24F42004A079C /* AppDependenciesProtocol.swift in Sources */,
 				EFAAAD502BA25949004A079C /* Font+System.swift in Sources */,
+				EF9678282BA6555700C5B5DC /* AppRouter.swift in Sources */,
 				EF2AD6F12BA2D0BE0055DF65 /* RaceViewControllerFactory.swift in Sources */,
 				EF2AD6DD2BA28A1F0055DF65 /* RaceResponse.swift in Sources */,
 				EF2AD6C62BA262A70055DF65 /* RaceScreen.swift in Sources */,
@@ -578,7 +590,7 @@
 				EF2AD6D62BA26EB40055DF65 /* APIError.swift in Sources */,
 				EF7F52172BA3CBD600B223EF /* FilterItemViewModel.swift in Sources */,
 				EF2AD6C22BA25E660055DF65 /* RaceListViewModel.swift in Sources */,
-				EF7F52242BA3D8D200B223EF /* AppRouter.swift in Sources */,
+				EF7F52242BA3D8D200B223EF /* Routing.swift in Sources */,
 				EF2AD6D02BA26C810055DF65 /* NetworkManager.swift in Sources */,
 				EF2AD6CB2BA266C60055DF65 /* ActionView.swift in Sources */,
 				EF2AD6C92BA262EA0055DF65 /* RacePresenter.swift in Sources */,
