@@ -43,6 +43,7 @@ public final class FilterPresenter: FilterPresenterProtocol {
     }
 
     public func onApplyFilters() {
+        // Notify delegate (At the moment is `RacePresenter`)
         delegate?.filterDidApply(filter: filter)
         router.routeBack()
     }

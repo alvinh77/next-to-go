@@ -7,6 +7,11 @@
 
 import Foundation
 
+/*
+ This configuration can be potentially read from
+ remote configuration platform eg. LaunchDarkly
+ or local one eg. configuration files in codebase.
+ */
 public struct AppConfiguration {
     public let baseURL: String
     public let refreshDurationInSeconds: TimeInterval
