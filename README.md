@@ -45,6 +45,16 @@ Test:
 2. Select `NextToGo` or `MextToGoTests` target with supported simulator.
 3. `cmd + U` or click `Test` button in Xcode.
 
+## Screenshots
+| Races | Filter | No Result | Error |
+| --- | --- | --- | --- |
+| ![Races](https://github.com/alvinh77/next-to-go/assets/12960590/2bd7ff81-42ad-43b9-bcaa-8512025198d1) | ![Filter](https://github.com/alvinh77/next-to-go/assets/12960590/9e6f330f-b5fb-4dbd-a112-1bb46f82f50a) | ![NoResults](https://github.com/alvinh77/next-to-go/assets/12960590/faba421b-0a31-4efe-9449-19481c527317) | ![Error](https://github.com/alvinh77/next-to-go/assets/12960590/defd8bc6-dac8-4410-ba4f-d68190ab0534) |
+
+
+
+
+
+
 ## Architecture
 ### Tech Stack:
 **SwiftUI + UIKit**:
