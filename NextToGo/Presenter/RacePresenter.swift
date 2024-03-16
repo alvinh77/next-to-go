@@ -34,9 +34,14 @@ public final class RacePresenter: RacePresenterProtocol {
     }
 
     public func loadData() {
+        /*
+         Cancel the inflight task and kick off a latest one
+         to avoid race condition that comes from keep calling
+         this method by different instances
+         */
         inflightTask?.cancel()
         if !viewState.isSuccess { viewState = .loading }
-        let operation: @Sendable () async -> Void = { @MainActor [filter, repository, weak self] in
+        inflightTask = taskFactory.makeTask { @MainActor [filter, repository, weak self] in
             do {
                 let viewModel = try await repository.fetchRaces(filter: filter, forceUpdate: true)
                 guard !Task.isCancelled else { return }
@@ -47,7 +52,6 @@ public final class RacePresenter: RacePresenterProtocol {
                 self?.handleErrorResult()
             }
         }
-        inflightTask = taskFactory.makeTask(operation: operation)
     }
 
     public func onFilter() {
@@ -67,6 +71,11 @@ extension RacePresenter: ViewControllerLifecycleDelegate {
 
 extension RacePresenter: FilterAppliedActionDelegate {
     public func filterDidApply(filter: RaceFilter) {
+        /*
+         If filter does not change, we do not need
+         to load new data which might produce some
+         jumping/refreshing/flashing to users
+         */
         guard self.filter != filter else { return }
         self.filter = filter
         loadData()

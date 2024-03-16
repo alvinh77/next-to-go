@@ -42,12 +42,22 @@ extension URLRequest {
                 guard var urlComponents = URLComponents(
                     string: "\(request.baseURL)\(request.path)"
                 ) else {
+                    /*
+                     Discussion: Seems it is hard to get into this scenario
+                     because `URLComponents(string:)` will always be non-nil
+                     even if `URLComponents(string: "")`.
+                     See `APIRequestTests` for more information.
+                     TODO: Need more investigation on this to cover the tests
+                     */
                     throw APIError.invalidURL
                 }
                 urlComponents.queryItems = request.parameters?.map { key, value in
                     URLQueryItem(name: key, value: value)
                 }
                 guard let url = urlComponents.url else {
+                    /*
+                     Same as above
+                     */
                     throw APIError.invalidURL
                 }
                 return url

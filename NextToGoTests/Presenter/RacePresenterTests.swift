@@ -85,6 +85,18 @@ final class RacePresenterTests: XCTestCase {
         XCTAssertTrue(presenter.viewState.isSuccess)
     }
 
+    @MainActor func test_duplicatedLoadData_previousTasksWillBeCancelled() async throws {
+        presenter.loadData()
+        presenter.loadData()
+        XCTAssertTrue(presenter.viewState.isLoading)
+        XCTAssertEqual(taskFactory.tasks.count, 2)
+        let task1 = try XCTUnwrap(taskFactory.tasks.first as? Task<Void, Never>)
+        XCTAssertTrue(task1.isCancelled)
+        let task2 = try XCTUnwrap(taskFactory.tasks.last as? Task<Void, Never>)
+        await task2.value
+        XCTAssertTrue(presenter.viewState.isSuccess)
+    }
+
     @MainActor func test_onFilter_callsRouter() {
         presenter.onFilter()
         XCTAssertEqual(router.routeToFilterCalls.count, 1)
