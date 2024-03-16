@@ -36,7 +36,7 @@ public final class FilterPresenter: FilterPresenterProtocol {
                         ? "checkmark.square"
                         : "square",
                     title: availableFilter.name,
-                    action: { [weak self] in self?.click(availableFilter) }
+                    action: { @MainActor [weak self] in self?.click(availableFilter) }
                 )
             }
         )

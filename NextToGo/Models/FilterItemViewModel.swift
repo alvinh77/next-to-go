@@ -5,7 +5,7 @@
 //  Created by Alvin He on 15/3/2024.
 //
 
-public struct FilterItemViewModel: Identifiable, @unchecked Sendable {
+public struct FilterItemViewModel: Identifiable {
     public let id: String
     public let systemImageName: String
     public let title: String
