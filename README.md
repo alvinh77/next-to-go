@@ -26,6 +26,9 @@ The main feature of this app is displaying ‘Next to Go’ races using a given 
 - Add accessibility labels such that you can navigate via voiceover (Optional)
     - This has not been added to the codebase at the moment considering the time limitation. Will add this later.
 
+## 3rd Party SDK/Library
+Compared to integrating 3rd party SDK/library with the risk of introducing potential bugs/issues, no 3rd party SDK or library is integrated here as all the features are not complex.
+
 ## Running and Testing
 To be able to run and test the app, the specs requirements are as follows:
 - iOS 15+
@@ -41,3 +44,33 @@ Test:
 1. Open the file `NextToGo.xcodeproj`
 2. Select `NextToGo` or `MextToGoTests` target with supported simulator.
 3. `cmd + U` or click `Test` button in Xcode.
+
+## Architecture
+### Tech Stack:
+**SwiftUI + UIKit**:
+SwiftUI is mainly used to compose UI elements while UIKit is introduced to handle navigation, considering UIKit has a more mature navigation system in case we would like to implement more features like universal redirection.
+
+**Combine/ObservableObject**:
+This is introduced to work with SwiftUI to update UI's changes easily.
+
+**async/await**:
+To practice more on the Apple's new programming paradigm, we introduced this to do the asynchronous operation. At the same time I take a challenge of making the project completely strictly concurrency checking. As a result, `Sendable` and `MainActor` are introduced in many places. Limited `@unchecked Sendable` are introduced in the test/mock classes to avoid warnings.
+
+**Design Patten**:
+We adopt a hybrid architecture with MVVM and VIPER, considering making the routing logics more unit testable. Based on the functionalities, we modularised the codes into different parts:
+- **AppDependecies**: The top level module in the app for dependencies injection in the app level. The runtime `AppDependencies` could be different class based on the configuration file `DefaultConfiguration.xcconfig`. For example, base URL could be different for different target/environment. The varied `AppConfiguration` could be read from remote platform (eg. LaunchDarkly, backend API) or local configuration file.
+- **Router/Routing**: `Router` is the implementation module of `Routing` module. To avoid cycling dependencies, we separate `Routing` and `Router` modules. Lower levels modules will depend on the protocols module `Routing` while higher level module (eg. AppDependencies) will initialize classes/structs in `Router` and inject them to different instances (eg. `RacePresenter`, `FilterPresenter`)
+- **Views**: All UI/UX related classes/structs including the views factory. It will depend on most of the lower level modules
+- **Presenter**: The core part of the logics that handle views' event and request/distribute data/event. For example, digest events from views to load data or navigate to the next screen, requesting data from repository and updating displayed content on screen.
+- **Repository**: It is introduced to handle data logics like data retrieving, caching and mapping.
+- **Networking**: A encapsulation of the networking logics that is responsible for requesting/receiving response from backend.
+- **Navigation**: A wrapup protocol module for `UINavigationController` which will be injected into `Router`
+- **Model**: At the moment, we put all models in this module for simplicity. However in real project, the models will be put in different modules based on the requirements and access control.
+
+# To be improved
+Due to time limitation, we made some tradeoffs during the implementation which is acknowledged. To make it better and robuster, we note some points here to track for the futures' improvement. Also feedbacks are welcome and appreciated which would quite help self-improvement.
+1. **Commits**: Each commit could be better organized based on its scope. A smaller and single responsibility commit is more readable and revertible.
+2. **Accessibility**: This is optionally required in the task but we have not implemented it at the moment but we will do it shortly.
+3. **Snapshots testing**: Snapshots tests will be introduced to make static UI validation.
+4. **UI testing**: UI testings has not been implemented considering the time limitation like snapshots testing. This can be done with the Accessibility work mentioned above.
+5. **CI/CD**: This could be introduced like what we did [here](https://github.com/alvinh77/async-data-loader/actions)
