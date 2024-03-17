@@ -50,11 +50,6 @@ Test:
 | --- | --- | --- | --- |
 | ![Races](https://github.com/alvinh77/next-to-go/assets/12960590/2bd7ff81-42ad-43b9-bcaa-8512025198d1) | ![Filter](https://github.com/alvinh77/next-to-go/assets/12960590/9e6f330f-b5fb-4dbd-a112-1bb46f82f50a) | ![NoResults](https://github.com/alvinh77/next-to-go/assets/12960590/faba421b-0a31-4efe-9449-19481c527317) | ![Error](https://github.com/alvinh77/next-to-go/assets/12960590/defd8bc6-dac8-4410-ba4f-d68190ab0534) |
 
-
-
-
-
-
 ## Architecture
 ### Tech Stack:
 **SwiftUI + UIKit**:
@@ -65,6 +60,9 @@ This is introduced to work with SwiftUI to update UI's changes easily.
 
 **async/await**:
 To practice more on the Apple's new programming paradigm, we introduced this to do the asynchronous operation. At the same time I take a challenge of making the project completely strictly concurrency checking. As a result, `Sendable` and `MainActor` are introduced in many places. Limited `@unchecked Sendable` are introduced in the test/mock classes to avoid warnings.
+
+**Diagram/Modularization**:
+![Modularization](https://www.mermaidchart.com/raw/11b7b092-582e-4b0d-8dd7-fc9fae89cb55?theme=light&version=v0.1&format=svg)
 
 **Design Patten**:
 We adopt a hybrid architecture with MVVM and VIPER, considering making the routing logics more unit testable. Based on the functionalities, we modularised the codes into different parts:
