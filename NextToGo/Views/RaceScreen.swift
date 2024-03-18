@@ -9,23 +9,20 @@ import Combine
 import SwiftUI
 
 public struct RaceScreen<Presenter: RacePresenterProtocol>: View {
+    public typealias UpdateTimer = Publishers.Autoconnect<Timer.TimerPublisher>
+    private let countdownTimer: UpdateTimer
+    private let refreshTimer: UpdateTimer
     @ObservedObject private var presenter: Presenter
-    @State private var currentDate: Date
-    private let updateTimer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    private let refreshTimer: Publishers.Autoconnect<Timer.TimerPublisher>
+    @State private var currentDate: Date = .now
 
     public init(
-        presenter: Presenter,
-        currentDate: Date = .now,
-        refreshDurationInSeconds: TimeInterval
+        countdownTimer: UpdateTimer,
+        refreshTimer: UpdateTimer,
+        presenter: Presenter
     ) {
+        self.countdownTimer = countdownTimer
+        self.refreshTimer = refreshTimer
         self.presenter = presenter
-        self.currentDate = currentDate
-        self.refreshTimer = Timer.publish(
-            every: refreshDurationInSeconds,
-            on: .main,
-            in: .common
-        ).autoconnect()
     }
 
     public var body: some View {
@@ -60,7 +57,7 @@ extension RaceScreen {
             }
             .background(Color.orange.ignoresSafeArea())
         }
-        .onReceive(updateTimer) { date in
+        .onReceive(countdownTimer) { date in
             currentDate = date
         }
         .onReceive(refreshTimer) { _ in
@@ -75,21 +72,25 @@ struct RaceScreen_Previews: PreviewProvider {
     typealias State = ViewState<RaceListViewModel, ActionViewModel>
 
     static var previews: some View {
+        makeScreen(viewState: .notStarted)
+        makeScreen(viewState: .loading)
+        makeScreen(viewState: .success(successModel))
+        makeScreen(viewState: .action(actionModel))
+    }
+
+    private static func makeScreen(viewState: State) -> RaceScreen<TestPresenter> {
         RaceScreen(
-            presenter: TestPresenter(viewState: .notStarted),
-            refreshDurationInSeconds: 60
-        )
-        RaceScreen(
-            presenter: TestPresenter(viewState: .loading),
-            refreshDurationInSeconds: 60
-        )
-        RaceScreen(
-            presenter: TestPresenter(viewState: .success(successModel)),
-            refreshDurationInSeconds: 60
-        )
-        RaceScreen(
-            presenter: TestPresenter(viewState: .action(actionModel)),
-            refreshDurationInSeconds: 60
+            countdownTimer: Timer.publish(
+                every: 1,
+                on: .main,
+                in: .common
+            ).autoconnect(),
+            refreshTimer: Timer.publish(
+                every: 50,
+                on: .main,
+                in: .common
+            ).autoconnect(),
+            presenter: TestPresenter(viewState: viewState)
         )
     }
 

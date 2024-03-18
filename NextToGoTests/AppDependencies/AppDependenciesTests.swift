@@ -19,7 +19,9 @@ final class AppDependenciesTests: XCTestCase {
                 maxReturnCount: 5
             ),
             appRouter: TestAppRouter(),
-            navigationControllerFactory: TestNavigationControllerFactory(),
+            navigationControllerFactory: TestNavigationControllerFactory(
+                navigationController: .init()
+            ),
             navigationController: TestNavigationController()
         )
         XCTAssertEqual(

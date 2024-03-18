@@ -48,8 +48,17 @@ public struct RaceViewControllerFactory: RaceViewControllerFactoryProtocol {
             taskFactory: TaskFactory()
         )
         let screen = RaceScreen(
-            presenter: presenter,
-            refreshDurationInSeconds: refreshDurationInSeconds
+            countdownTimer: Timer.publish(
+                every: 1,
+                on: .main,
+                in: .common
+            ).autoconnect(),
+            refreshTimer: Timer.publish(
+                every: refreshDurationInSeconds,
+                on: .main,
+                in: .common
+            ).autoconnect(),
+            presenter: presenter
         )
         let viewController = RaceHostingController(rootView: screen)
         viewController.title = "Next To Go"

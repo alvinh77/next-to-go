@@ -44,6 +44,7 @@ extension RaceResponse {
         let number: Int
         let advisedStart: Int
 
+        // swiftlint:disable:next nesting
         public enum CodingKeys: String, CodingKey {
             case identifier = "race_id"
             case categoryId = "category_id"

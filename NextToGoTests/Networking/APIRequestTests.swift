@@ -31,7 +31,7 @@ final class APIRequestTests: XCTestCase {
          Discussion: Seems it is hard to get into the scenario
          of throwing `invalidURL` error because `URLComponents(string:)`
          will always be non-nil even if `URLComponents(string: "")`.
-         TODO: Need more investigation on this to cover the tests
+         Need more investigation on this to cover the tests
          */
         let urlRequest = try URLRequest(request: request)
         XCTAssertEqual(urlRequest.url?.absoluteString, "")
