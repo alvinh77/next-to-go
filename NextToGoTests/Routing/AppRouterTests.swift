@@ -18,8 +18,8 @@ final class AppRouterTests: XCTestCase {
 
     @MainActor override func setUp() {
         navigationController = .init()
-        raceViewControllerFactory = .init()
-        filterViewControllerFactory = .init()
+        raceViewControllerFactory = .init(viewController: .init())
+        filterViewControllerFactory = .init(viewController: .init())
         router = AppRouter(
             navigationController: navigationController,
             raceViewControllerFactory: raceViewControllerFactory,

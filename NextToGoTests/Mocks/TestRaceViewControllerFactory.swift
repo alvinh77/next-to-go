@@ -13,7 +13,7 @@ public final class TestRaceViewControllerFactory: RaceViewControllerFactoryProto
     public var viewController: UIViewController
 
     public init(
-        viewController: UIViewController = .init()
+        viewController: UIViewController
     ) {
         self.viewController = viewController
     }

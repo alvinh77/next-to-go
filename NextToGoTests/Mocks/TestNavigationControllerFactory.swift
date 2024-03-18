@@ -12,7 +12,7 @@ public struct TestNavigationControllerFactory: NavigationControllerFactoryProtoc
     public var navigationController: TestNavigationController
 
     public init(
-        navigationController: TestNavigationController = .init()
+        navigationController: TestNavigationController
     ) {
         self.navigationController = navigationController
     }

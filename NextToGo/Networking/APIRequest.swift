@@ -47,7 +47,7 @@ extension URLRequest {
                      because `URLComponents(string:)` will always be non-nil
                      even if `URLComponents(string: "")`.
                      See `APIRequestTests` for more information.
-                     TODO: Need more investigation on this to cover the tests
+                     Need more investigation on this to cover the tests
                      */
                     throw APIError.invalidURL
                 }
