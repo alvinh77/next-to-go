@@ -17,10 +17,17 @@
           "name" : "NextToGo"
         }
       ]
-    }
+    },
+    "environmentVariableEntries" : [
+      {
+        "key" : "isTest",
+        "value" : "True"
+      }
+    ]
   },
   "testTargets" : [
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:NextToGo.xcodeproj",
         "identifier" : "EFABA6122BA179E900CA5C13",

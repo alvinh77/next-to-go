@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/alvinh77/next-to-go/graph/badge.svg?token=7R0WXJO8UD)](https://codecov.io/gh/alvinh77/next-to-go)
+
 # NextToGo (Take Home Exercise)
 NextToGo is a demo app which is written for the technical task to demonstrate author's knowledge and skills. Also as part of the interview process, it provides a better observation and understanding of author's thought process and methodology.
 
@@ -75,10 +77,14 @@ We adopt a hybrid architecture with MVVM and VIPER, considering making the routi
 - **Navigation**: A wrapup protocol module for `UINavigationController` which will be injected into `Router`
 - **Model**: At the moment, we put all models in this module for simplicity. However in real project, the models will be put in different modules based on the requirements and access control.
 
+# Coverage
+![Logo](https://codecov.io/gh/alvinh77/next-to-go/graphs/tree.svg?token=7R0WXJO8UD)
+
+[Dashboard](https://app.codecov.io/gh/alvinh77/next-to-go)
+
 # To be improved
 Due to time limitation, we made some tradeoffs during the implementation which is acknowledged. To make it better and robuster, we note some points here to track for the futures' improvement. Also feedbacks are welcome and appreciated which would quite help self-improvement.
 1. **Commits**: Each commit could be better organized based on its scope. A smaller and single responsibility commit is more readable and revertible.
 2. **Accessibility**: This is optionally required in the task but we have not implemented it at the moment but we will do it shortly.
 3. **Snapshots testing**: Snapshots tests will be introduced to make static UI validation.
 4. **UI testing**: UI testings has not been implemented considering the time limitation like snapshots testing. This can be done with the Accessibility work mentioned above.
-5. **CI/CD**: This could be introduced like what we did [here](https://github.com/alvinh77/async-data-loader/actions)

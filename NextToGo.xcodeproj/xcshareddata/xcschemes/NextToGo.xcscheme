@@ -46,17 +46,6 @@
                ReferencedContainer = "container:NextToGo.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "YES"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EFABA61C2BA179E900CA5C13"
-               BuildableName = "NextToGoUITests.xctest"
-               BlueprintName = "NextToGoUITests"
-               ReferencedContainer = "container:NextToGo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
