@@ -44,6 +44,7 @@
 		EF2AD6F52BA2D3860055DF65 /* ViewControllerLifecycleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6F42BA2D3860055DF65 /* ViewControllerLifecycleDelegate.swift */; };
 		EF2AD6F72BA3ADE50055DF65 /* TestRaceViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AD6F62BA3ADE50055DF65 /* TestRaceViewControllerFactory.swift */; };
 		EF6D98F12BA188C700C02262 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */; };
+		EF77CB1C2BA9458600D9372A /* TaskFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77CB1B2BA9458600D9372A /* TaskFactoryTests.swift */; };
 		EF7F52152BA3C92900B223EF /* FilterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52142BA3C92900B223EF /* FilterItemView.swift */; };
 		EF7F52172BA3CBD600B223EF /* FilterItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52162BA3CBD600B223EF /* FilterItemViewModel.swift */; };
 		EF7F52192BA3CC3000B223EF /* FilterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7F52182BA3CC3000B223EF /* FilterListViewModel.swift */; };
@@ -128,6 +129,7 @@
 		EF2AD6F42BA2D3860055DF65 /* ViewControllerLifecycleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLifecycleDelegate.swift; sourceTree = "<group>"; };
 		EF2AD6F62BA3ADE50055DF65 /* TestRaceViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRaceViewControllerFactory.swift; sourceTree = "<group>"; };
 		EF6D98F02BA188C700C02262 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF77CB1B2BA9458600D9372A /* TaskFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFactoryTests.swift; sourceTree = "<group>"; };
 		EF7F52142BA3C92900B223EF /* FilterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemView.swift; sourceTree = "<group>"; };
 		EF7F52162BA3CBD600B223EF /* FilterItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItemViewModel.swift; sourceTree = "<group>"; };
 		EF7F52182BA3CC3000B223EF /* FilterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterListViewModel.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				EF96781A2BA42B6E00C5B5DC /* FilterPresenterTests.swift */,
 				EF96781C2BA430DD00C5B5DC /* RacePresenterTests.swift */,
+				EF77CB1B2BA9458600D9372A /* TaskFactoryTests.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				EF2AD6DF2BA28F520055DF65 /* RaceResponseTests.swift in Sources */,
 				EF96781F2BA4313700C5B5DC /* TestRaceRespository.swift in Sources */,
 				EF2AD6EB2BA2A8AE0055DF65 /* TestRaceMapper.swift in Sources */,
+				EF77CB1C2BA9458600D9372A /* TaskFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

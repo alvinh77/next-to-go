@@ -86,4 +86,13 @@ final class RaceMapperTests: XCTestCase {
         XCTAssertEqual(result.items.count, 1)
         XCTAssertEqual(result.items[0].id, "id3")
     }
+
+    func test_map_whenRacesStarted() {
+        let result = RaceMapper().map(
+            response,
+            filter: .none,
+            maxReturnCount: 5
+        )
+        XCTAssertEqual(result.items.count, 0)
+    }
 }
