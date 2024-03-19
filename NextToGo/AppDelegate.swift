@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     private func makeWindow() -> UIWindow? {
+        guard ProcessInfo.processInfo.environment["isTest"] == nil else { return nil }
         let window = UIWindow(frame: UIScreen.main.bounds)
         window.rootViewController = getAppDependencies()?.rootViewController
         window.makeKeyAndVisible()
