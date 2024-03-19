@@ -166,6 +166,7 @@
 		EFABA60D2BA179E900CA5C13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EFABA6132BA179E900CA5C13 /* NextToGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NextToGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFABA6312BA17CB400CA5C13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFE9BF562BA90D3300768695 /* UnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +391,7 @@
 		EFABA5F92BA179E800CA5C13 = {
 			isa = PBXGroup;
 			children = (
+				EFE9BF562BA90D3300768695 /* UnitTests.xctestplan */,
 				EFABA6042BA179E800CA5C13 /* NextToGo */,
 				EFABA6162BA179E900CA5C13 /* NextToGoTests */,
 				EFABA6032BA179E800CA5C13 /* Products */,

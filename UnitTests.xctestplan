@@ -1,0 +1,32 @@
+{
+  "configurations" : [
+    {
+      "id" : "02816AA0-9BD2-48D2-8E4B-BE13E59D1571",
+      "name" : "Configuration",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:NextToGo.xcodeproj",
+          "identifier" : "EFABA6012BA179E800CA5C13",
+          "name" : "NextToGo"
+        }
+      ]
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:NextToGo.xcodeproj",
+        "identifier" : "EFABA6122BA179E900CA5C13",
+        "name" : "NextToGoTests"
+      }
+    }
+  ],
+  "version" : 1
+}

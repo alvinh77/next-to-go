@@ -25,7 +25,8 @@ jobs:
     - name: Tests
       run: |
         xcodebuild test \
-        -scheme NextToGo \
+        -scheme NextToGoTests \
+        -testPlan UnitTests \
         -destination 'platform=iOS Simulator,OS=17.2,name=iPhone 15 Pro' \
         -enableCodeCoverage YES \
         -derivedDataPath .DerivedData/ \
