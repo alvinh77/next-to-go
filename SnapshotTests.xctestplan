@@ -1,0 +1,39 @@
+{
+  "configurations" : [
+    {
+      "id" : "4D0BC078-FF13-4F15-BD49-AF29205C8A6F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:NextToGo.xcodeproj",
+          "identifier" : "EFABA6012BA179E800CA5C13",
+          "name" : "NextToGo"
+        }
+      ]
+    },
+    "environmentVariableEntries" : [
+      {
+        "key" : "isTest",
+        "value" : "True"
+      }
+    ]
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:NextToGo.xcodeproj",
+        "identifier" : "EFF3C98C2BA9949800939018",
+        "name" : "NextToGoSnapshotTests"
+      }
+    }
+  ],
+  "version" : 1
+}

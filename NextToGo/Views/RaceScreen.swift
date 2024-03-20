@@ -13,13 +13,15 @@ public struct RaceScreen<Presenter: RacePresenterProtocol>: View {
     private let countdownTimer: UpdateTimer
     private let refreshTimer: UpdateTimer
     @ObservedObject private var presenter: Presenter
-    @State private var currentDate: Date = .now
+    @State private var currentDate: Date
 
     public init(
+        currentDate: Date = .now,
         countdownTimer: UpdateTimer,
         refreshTimer: UpdateTimer,
         presenter: Presenter
     ) {
+        _currentDate = State(initialValue: currentDate)
         self.countdownTimer = countdownTimer
         self.refreshTimer = refreshTimer
         self.presenter = presenter
