@@ -1,0 +1,50 @@
+name: Unit Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  unit-tests:
+    name: 'Unit Tests'
+    runs-on: macos-13
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Switch to xcode 15.2
+      run: sudo xcode-select --switch /Applications/Xcode_15.2.app
+    
+    - name: Install xcresultparser
+      run: |
+        brew tap a7ex/homebrew-formulae
+        brew install xcresultparser
+
+    - name: Tests
+      run: |
+        xcodebuild test \
+        -scheme NextToGoTests \
+        -testPlan UnitTests \
+        -destination 'platform=iOS Simulator,OS=17.2,name=iPhone 15 Pro' \
+        -enableCodeCoverage YES \
+        -derivedDataPath .DerivedData/ \
+        -resultBundlePath .DerivedData/Artifacts/ResultBundle.xcresult
+
+    - name: Generate Report
+      run: |
+        xcresultparser \
+        --output-format cobertura \
+        ".DerivedData/Artifacts/ResultBundle.xcresult" >".DerivedData/Artifacts/coverage.xml"
+
+        
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.1.0
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        directory: .DerivedData/Artifacts/
+        flags: unittests
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        slug: alvinh77/next-to-go
