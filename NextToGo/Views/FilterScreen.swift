@@ -36,12 +36,8 @@ public struct FilterScreen<Presenter: FilterPresenterProtocol>: View {
 
 // MARK: - Preview
 
-struct FilterScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        FilterScreen(presenter: TestPresenter())
-    }
-
-    @MainActor private class TestPresenter: FilterPresenterProtocol {
+#Preview {
+    class TestPresenter: FilterPresenterProtocol {
         let model = FilterListViewModel(
             items: [
                 FilterItemViewModel(
@@ -63,4 +59,5 @@ struct FilterScreen_Previews: PreviewProvider {
         )
         nonisolated func onApplyFilters() {}
     }
+    return FilterScreen(presenter: TestPresenter())
 }

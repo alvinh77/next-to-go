@@ -11,6 +11,10 @@ The main feature of this app is displaying ‘Next to Go’ races using a given 
 - For a race, meeting name, race number and advertised start as a countdown have to be displayed as minimum.
 - Race data will be updated/refreshed periodically. 
 
+## Non-required Features
+- Snapshots tests have been added in target `NextToGoSnapshotTests`. See [here](NextToGoSnapshotTests) for more details.
+- CI/CD have been supported by Github Action which includes `Unit Tests`, `Snapshot Tests`, `Swift Lint` and `Code Coverage`. See [here](.github/workflows) for more details.
+
 ## Tech Requirements
 - SwiftUI or UIKit to build UI/UX.
     - Here we adopt SwiftUI which provide a modern and efficient way of composing UI elements.
@@ -29,7 +33,8 @@ The main feature of this app is displaying ‘Next to Go’ races using a given 
     - This has not been added to the codebase at the moment considering the time limitation. Will add this later.
 
 ## 3rd Party SDK/Library
-Compared to integrating 3rd party SDK/library with the risk of introducing potential bugs/issues, no 3rd party SDK or library is integrated here as all the features are not complex.
+- Compared to integrating 3rd party SDK/library with the risk of introducing potential bugs/issues, no 3rd party SDK or library is integrated in the app target as all the features are not complex.
+- A snapshot tests framework is introduced for UI testing/validation.
 
 ## Running and Testing
 To be able to run and test the app, the specs requirements are as follows:
@@ -86,5 +91,4 @@ We adopt a hybrid architecture with MVVM and VIPER, considering making the routi
 Due to time limitation, we made some tradeoffs during the implementation which is acknowledged. To make it better and robuster, we note some points here to track for the futures' improvement. Also feedbacks are welcome and appreciated which would quite help self-improvement.
 1. **Commits**: Each commit could be better organized based on its scope. A smaller and single responsibility commit is more readable and revertible.
 2. **Accessibility**: This is optionally required in the task but we have not implemented it at the moment but we will do it shortly.
-3. **Snapshots testing**: Snapshots tests will be introduced to make static UI validation.
-4. **UI testing**: UI testings has not been implemented considering the time limitation like snapshots testing. This can be done with the Accessibility work mentioned above.
+3. **UI testing**: UI testings has not been implemented considering the time limitation like snapshots testing. This can be done with the Accessibility work mentioned above.
