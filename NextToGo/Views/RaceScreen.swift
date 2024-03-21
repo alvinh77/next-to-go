@@ -96,7 +96,7 @@ struct RaceScreen_Previews: PreviewProvider {
         )
     }
 
-    @MainActor private class TestPresenter: RacePresenterProtocol {
+    private class TestPresenter: RacePresenterProtocol {
         let viewState: State
         init(
             viewState: State = .notStarted
