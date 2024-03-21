@@ -17,13 +17,21 @@ public struct RaceScreen<Presenter: RacePresenterProtocol>: View {
 
     public init(
         currentDate: Date = .now,
-        countdownTimer: UpdateTimer,
-        refreshTimer: UpdateTimer,
+        countdownTimerInterval: TimeInterval,
+        refreshTimerInterval: TimeInterval,
         presenter: Presenter
     ) {
         _currentDate = State(initialValue: currentDate)
-        self.countdownTimer = countdownTimer
-        self.refreshTimer = refreshTimer
+        self.countdownTimer = Timer.publish(
+            every: countdownTimerInterval,
+            on: .main,
+            in: .common
+        ).autoconnect()
+        self.refreshTimer = Timer.publish(
+            every: refreshTimerInterval,
+            on: .main,
+            in: .common
+        ).autoconnect()
         self.presenter = presenter
     }
 
@@ -70,62 +78,64 @@ extension RaceScreen {
 
 // MARK: - Preview
 
-struct RaceScreen_Previews: PreviewProvider {
-    typealias State = ViewState<RaceListViewModel, ActionViewModel>
-
-    static var previews: some View {
-        makeScreen(viewState: .notStarted)
-        makeScreen(viewState: .loading)
-        makeScreen(viewState: .success(successModel))
-        makeScreen(viewState: .action(actionModel))
-    }
-
-    private static func makeScreen(viewState: State) -> RaceScreen<TestPresenter> {
-        RaceScreen(
-            countdownTimer: Timer.publish(
-                every: 1,
-                on: .main,
-                in: .common
-            ).autoconnect(),
-            refreshTimer: Timer.publish(
-                every: 50,
-                on: .main,
-                in: .common
-            ).autoconnect(),
-            presenter: TestPresenter(viewState: viewState)
-        )
-    }
-
-    private class TestPresenter: RacePresenterProtocol {
-        let viewState: State
-        init(
-            viewState: State = .notStarted
-        ) {
-            self.viewState = viewState
-        }
-        nonisolated func loadData() {}
-        nonisolated func onFilter() {}
-    }
-
-    static var successModel: RaceListViewModel {
-        RaceListViewModel(
-            items: (0...5).map {
-                RaceItemViewModel(
-                    id: "\($0)",
-                    title: "Meeting Name \($0)",
-                    detail: "Race Number \($0)",
-                    startTime: 100 + $0
-                )
-            }
-        )
-    }
-
-    static var actionModel: ActionViewModel {
-        ActionViewModel(
-            title: "Whoops!",
-            detail: "An unexpected error found 🔧",
-            actionTitle: "Try Again",
-            action: {}
-        )
-    }
+#if DEBUG
+#Preview {
+    makeScreen(viewState: .notStarted)
 }
+
+#Preview {
+    makeScreen(viewState: .loading)
+}
+
+#Preview {
+    makeScreen(
+        viewState: .success(
+            RaceListViewModel(
+                items: (0...5).map {
+                    RaceItemViewModel(
+                        id: "\($0)",
+                        title: "Meeting Name \($0)",
+                        detail: "Race Number \($0)",
+                        startTime: 100 + $0
+                    )
+                }
+            )
+        )
+    )
+}
+
+#Preview {
+    makeScreen(
+        viewState: .action(
+            ActionViewModel(
+                title: "Whoops!",
+                detail: "An unexpected error found 🔧",
+                actionTitle: "Try Again",
+                action: {}
+            )
+        )
+    )
+}
+
+@MainActor private func makeScreen(
+    viewState: ViewState<RaceListViewModel, ActionViewModel>
+) -> RaceScreen<TestPresenter> {
+    RaceScreen(
+        currentDate: .now,
+        countdownTimerInterval: 1,
+        refreshTimerInterval: 60,
+        presenter: TestPresenter(viewState: viewState)
+    )
+}
+
+private class TestPresenter: RacePresenterProtocol {
+    let viewState: ViewState<RaceListViewModel, ActionViewModel>
+    init(
+        viewState: ViewState<RaceListViewModel, ActionViewModel>
+    ) {
+        self.viewState = viewState
+    }
+    func loadData() {}
+    func onFilter() {}
+}
+#endif

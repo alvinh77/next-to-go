@@ -14,7 +14,7 @@ import XCTest
 typealias State = ViewState<RaceListViewModel, ActionViewModel>
 
 final class RaceScreenTests: XCTestCase {
-    @MainActor func test_notStartedState() {
+    @MainActor func test_notStarted() {
         let viewController = UIHostingController(rootView: makeScreen(viewState: .notStarted))
         snapshotTest(viewController: viewController)
     }
@@ -43,16 +43,8 @@ extension RaceScreenTests {
     @MainActor private func makeScreen(viewState: State) -> RaceScreen<TestPresenter> {
         RaceScreen(
             currentDate: .init(timeIntervalSince1970: 0),
-            countdownTimer: Timer.publish(
-                every: 1,
-                on: .main,
-                in: .common
-            ).autoconnect(),
-            refreshTimer: Timer.publish(
-                every: 50,
-                on: .main,
-                in: .common
-            ).autoconnect(),
+            countdownTimerInterval: 1,
+            refreshTimerInterval: 50,
             presenter: TestPresenter(viewState: viewState)
         )
     }
@@ -64,8 +56,8 @@ extension RaceScreenTests {
         ) {
             self.viewState = viewState
         }
-        nonisolated func loadData() {}
-        nonisolated func onFilter() {}
+        func loadData() {}
+        func onFilter() {}
     }
 
     private var successModel: RaceListViewModel {
