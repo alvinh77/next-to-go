@@ -48,16 +48,8 @@ public struct RaceViewControllerFactory: RaceViewControllerFactoryProtocol {
             taskFactory: TaskFactory()
         )
         let screen = RaceScreen(
-            countdownTimer: Timer.publish(
-                every: 1,
-                on: .main,
-                in: .common
-            ).autoconnect(),
-            refreshTimer: Timer.publish(
-                every: refreshDurationInSeconds,
-                on: .main,
-                in: .common
-            ).autoconnect(),
+            countdownTimerInterval: 1,
+            refreshTimerInterval: refreshDurationInSeconds,
             presenter: presenter
         )
         let viewController = RaceHostingController(rootView: screen)

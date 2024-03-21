@@ -57,7 +57,7 @@ public struct FilterScreen<Presenter: FilterPresenterProtocol>: View {
                 )
             ]
         )
-        nonisolated func onApplyFilters() {}
+        func onApplyFilters() {}
     }
     return FilterScreen(presenter: TestPresenter())
 }
